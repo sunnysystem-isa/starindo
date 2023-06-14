@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ForecastController;
+use App\Models\User;
+use Faker\Core\Uuid;
+use App\Models\MasterData;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cookie;
@@ -13,6 +13,10 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Redirect;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\HelperController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ForecastController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -204,6 +208,79 @@ Route::group(['middleware' => ["auth"]], function () {
     // Route::get('/company/view', [CompanyController::class, 'view']);
     // Route::post('/customer/create', [ContactController::class, 'create']);
     // End :: Route Company
+
+
+    // Begin :: Master Data
+    Route::get('/Items', function () {
+        $tittle = "Items";
+        $column_2 = 'deskripsi';
+        $column_2_name = 'Unit';
+        $data = MasterData::where("jenis", "=", $tittle)->get();
+        return view('Master/master', compact(['data', 'tittle', 'column_2', 'column_2_name']));
+    });
+    
+    Route::get('/Location', function () {
+        $tittle = "Location";
+        $column_2 = null;
+        $column_2_name = null;
+        $data = MasterData::where("jenis", "=", $tittle)->get();
+        return view('Master/master', compact(['data', 'tittle']));
+    });
+    
+    Route::post('/{title}/new', function ($tittle, Request $request, MasterData $newData) {
+        $data = $request->all();
+        $uuid = new Uuid();
+        $newData->uuid = $uuid->uuid3();
+        $newData->name = $data["name"];
+        $newData->code = $data["code"];
+        $newData->category = $data["category"];
+        $newData->deskripsi = $data["deskripsi"];
+        $newData->jenis = $tittle;
+        
+        
+        Alert::success('Success', "Master Data Berhasil Ditambah")->autoClose(3000);
+        $newData->save();
+        
+        return redirect("/$tittle");
+    });
+    
+    Route::post('/{title}/update/{uuid}', function ($tittle, $uuid, Request $request, MasterData $newData) {
+        $data = $request->all();
+        
+        $newData = MasterData::where("uuid", "=", $uuid)->first();
+        $newData->name = $data["name"];
+        $newData->code = $data["code"];
+        $newData->category = $data["category"];
+        $newData->deskripsi = $data["deskripsi"];
+        
+        Alert::success('Success', "Master Data Berhasil Diubah")->autoClose(3000);
+        $newData->save();
+        
+        return redirect("/$tittle");
+    });
+    
+    Route::delete('/{title}/delete/{uuid}', function ($tittle, $uuid) {
+        $data = MasterData::where("uuid", "=", $uuid)->first();
+        $name = $data->name;
+        
+        $data->delete();
+        Alert::success('Account', $name . ", Berhasil Dihapus")->hideCloseButton();
+        
+        return redirect("/$tittle");
+    });
+    // End :: Master Data
+    
+    
+    // Begin :: BOM
+    Route::get('/bom-design', function () {
+        return view('BOM_Design');
+    });
+
+    Route::get('/view-design', function () {
+        return view('view_BOM_design');
+    });
+    // End :: BOM
+    
 
 // End :: Group Route
 });
