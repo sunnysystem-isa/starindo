@@ -156,6 +156,7 @@ Route::group(['middleware' => ["auth"]], function () {
     Route::get('dashboard-unit-9', function () {
         return view('dashboard_unit_9');
     });
+    
 
     // Begin :: Forecast
     Route::get('/forecast', [ForecastController::class, "index"]);
@@ -280,6 +281,14 @@ Route::group(['middleware' => ["auth"]], function () {
         return view('view_BOM_design');
     });
     // End :: BOM
+
+    Route::get('/job-order', function () {
+        return view('job_order');
+    });
+
+    Route::get('/view-job-order', function () {
+        return view('view_job_order');
+    });
     
 
 // End :: Group Route
