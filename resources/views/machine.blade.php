@@ -15,7 +15,7 @@
                 data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                 class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Goods Receipt
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Machine
                     <!--begin::Separator-->
                     {{-- <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span> --}}
                     <!--end::Separator-->
@@ -159,13 +159,11 @@
                 <thead>
                     <tr>
                         <th style="text-align: center">No</th>
-                        <th>No. Goods Receipt</th>
-                        <th>Factory</th>
-                        <th>Location In</th>
-                        <th>Item Name</th>
+                        <th>Machine Code</th>
+                        <th>Machine Name</th>
+                        <th>Location</th>
+                        <th>Job</th>
                         
-                        <th>Job Order</th>
-                        <th>Print</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -174,14 +172,11 @@
                     @endphp
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-goods-receipt">GR-00001</a></td>
+                            <td><a href="/view-machine">MCH-0001</a></td>
+                            <td>Production Machine</td>
                             <td>Production</td>
-                            <td>Main Inventory</td>
-                            <td>Finish Goods Polybag</td>
-                            
-                            <td><a href="/view-job-order">JO-00001</a></td>
-                            <td><a href="#">Print</a></td>
-                            
+                            <td>Production Goods</td>
+                                                        
                         </tr>              
                 </tbody>
                 
@@ -227,12 +222,12 @@
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>No. Goods Receipt</span>
+                            <span>Machine Code</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
                         <input type="text" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
-                        value="{{ old('no-job-order') }}" placeholder="No. Goods Receipt" />
+                        value="{{ old('no-job-order') }}" placeholder="Machine Code" />
                         @error('no-job-order')
                         <h6 class="text-danger fw-normal">{{ $message }}</h6>
                         @enderror
@@ -244,72 +239,40 @@
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Date</span>
+                            <span>Machine Name</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
-                        value="{{ old('no-job-order') }}" placeholder="Date" />
-                        @error('no-job-order')
+                        <input type="text" id="date" name="date" class="form-control form-control-solid" 
+                        value="" placeholder="Machine Name" />
+                        @error('date')
                         <h6 class="text-danger fw-normal">{{ $message }}</h6>
                         @enderror
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
+
+                    <!--begin::Input group Website-->
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="fs-6 fw-bold form-label mt-3 required">
+                            <span>Location</span>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                        <option value=""></option>
+                        <option value="Production">Production</option>
+                        <option value="Main Warehouse">Main Warehouse</option>
+                        </select>
+                        @error('Customer')
+                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                        @enderror
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
                     
-                    <!--begin::Input group Website-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Factory</span>
-                        </label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                        <option value=""></option>
-                        <option value="Production">Production</option>
-                        </select>
-                        @error('Customer')
-                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                        @enderror
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-
-                    <!--begin::Input group Website-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Location in</span>
-                        </label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                        <option value=""></option>
-                        <option value="Production">Production</option>
-                        </select>
-                        @error('Customer')
-                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                        @enderror
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-
-                    <!--begin::Input group Website-->
-                    <div class="fv-row mb-6">
-                            <!--begin::Label-->
-                            <label class="fs-6 fw-bold form-label mt-3">
-                            <span>PIC</span>
-                        </label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <input type="text" class="form-control form-control-solid" 
-                        id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-
-
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-sm btn-light btn-active-primary text-white btn-success" id="proyek_new_save">Save</button>
                     </div>

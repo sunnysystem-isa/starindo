@@ -25,7 +25,7 @@
                 class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
                 <div class="d-flex flex-row justify-content-beetwen">
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Finish Polybag</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">GR-00001</h1>
                 </div>
                 <!--end::Title-->
             </div>
@@ -33,13 +33,32 @@
             
             <div class="action">
                 <button class="btn btn-success btn-sm me-2" form="form-1">Save</button>
-                <a href="/bom-design" class="btn btn-sm btn-secondary">Cancel</a>
+                <a href="/goods-receipt" class="btn btn-sm btn-secondary">Cancel</a>
             </div>
 
         </div>
         <!--end::Container-->
     </div>
     <!--end::Toolbar-->
+
+    <!-- <div class="col-xl-15 mb-8 mx-6">
+        <div class="card card-flush h-lg-100" id="kt_contacts_main">
+            <div class="card-body pt-auto" style="background-color:#f1f1f1; border:1px solid #e6e6e6;">
+                <div id="stage-button" class="stage-list">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
+                    New</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
+                    In Progress</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
+                    Complete</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#mundur-stage" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; ">
+                    Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    
 
     <!--begin::Content-->
     <div class="post d-flex flex-column-fluid" id="kt_post">
@@ -55,54 +74,90 @@
                                     <form action="/contact/detail/update" method="post" id="form-1" onsubmit="return validateInputs(this)">
                                         @csrf
                                         <input type="hidden" name="id-contact" value="">
-                                        <!--begin::Input group Name-->
+                                        
+                                        <!--begin::Input group Website-->
                                         <div class="fv-row mb-7">
                                             <!--begin::Label-->
                                             <label class="fs-6 fw-bold form-label mt-3 required">
-                                                <span class="">No BOM</span>
+                                                <span>No. Goods Receipt<i class="bi bi-lock-fill"></i></span>
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" id="full-name" name="full-name"
-                                                class="form-control rounded-0 border-bottom-dashed border-top-0 border-left-0 border-right-0 p-0 required" value="BOM-001"
-                                                placeholder="" />
-                                            @error('name-customer')
-                                                <h6 class="text-danger">{{ $message }}eror</h6>
-                                            @enderror
-                                            <!--end::Input-->
-                                        </div>
-                                        <!--end::Input group Name-->
-        
-                                        <!--begin::Input group Email-->
-                                        <div class="fv-row mb-7">
-                                            <!--begin::Label-->
-                                            <label class="fs-6 fw-bold form-label mt-3 required">
-                                                <span class="">Manufacture Item</span>
-                                            </label>
-                                            <!--end::Label-->
-                                            <!--begin::Input-->
-                                            <input type="text" class="form-control rounded-0 border-bottom-dashed border-top-0 border-left-0 border-right-0 p-0 " id="email" name="email"
-                                                value="Finish Polybag" placeholder="" />
-                                            @error('email')
-                                                <h6 class="text-danger">{{ $message }}eror</h6>
+                                            <input type="text" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                            value="GR-00001" placeholder="No. Goods Receipt" readOnly/>
+                                            @error('no-job-order')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
                                             @enderror
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Input group-->
-        
-                                        <!--begin::Input group Phone-->
+
+                                        <!--begin::Input group Website-->
                                         <div class="fv-row mb-7">
                                             <!--begin::Label-->
                                             <label class="fs-6 fw-bold form-label mt-3 required">
-                                                <span class="">Location Process</span>
+                                                <span>Date</span>
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control rounded-0 border-bottom-dashed border-top-0 border-left-0 border-right-0 p-0" id="mobile-phone"
-                                                name="mobile-phone" value="Production" placeholder="" />
-                                            @error('phone-number')
-                                                <h6 class="text-danger">{{ $message }}eror</h6>
+                                            <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                            value="2023-06-16" placeholder="Date" />
+                                            @error('no-job-order')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
                                             @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+                                        
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>Factory</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                            
+                                            <option value="Production">Production</option>
+                                            <option value="Main Warehouse">Main Warehouse</option>
+                                            </select>
+                                            @error('Customer')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>Location in</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                            <option value="Main Warehouse">Main Warehouse</option>
+                                            <option value="Production">Production</option>
+                                            </select>
+                                            @error('Customer')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-6">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-bold form-label mt-3">
+                                                <span>PIC<i class="bi bi-lock-fill"></i></span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="text" class="form-control form-control-solid" 
+                                            id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Input group-->
@@ -339,9 +394,18 @@
                                                         </div>
                                                     </div> -->
                                                     <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Manufactured Qty.<i class="bi bi-lock-fill"></i></label>
-                                                        <input id="manufactur"  type="text" class="form-control" value="30" placeholder="" id="full-name" name="full-name" readonly>
+                                                        <label class="fs-6 fw-bold form-label mt-3">Job Order</label>
+                                                        <select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                    
+                                                        <option value="JO-00001">JO-00001</option>
+                                                        </select>
                                                     </div>
+                                                    <div class="col-6">
+                                                    </br>
+                                                    </br>
+                                                    <a href="/view-job-order" class="btn btn-secondary btn-sm me-2">View</a>
+                                                    </div>
+                                                
                                                 </div>
                                                 <!--End::Row-->
                                             </div>
@@ -350,71 +414,67 @@
                                             <div class="container">
                                                 <table id="example" class="table table-striped" style="width:100%">
                                                     <thead>
-                                                        <tr>
+                                                        <tr>                                                            
                                                             <th>Item Code</th>
-                                                            <th>Item Name</th>
-                                                            <th>Unit</th>
+                                                            <th>Item Name</th>   
                                                             <th>Quantity</th>
+                                                            <th>Remarks</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="BOM">
                                                             <tr>
-                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    
-                                                                    <option value="RAW-001">RAW-001</option>
-                                                                    <option value="FG-001">Finish Polybag</option></select>
-                                                                </td>
+                                                                
+                                                                <td><select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value="FG-001">FG-001</option>
+                                                                </select></td>
 
-                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value="PLASTIC"></td>
-
-                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    <option value="KG">KG</option></option>
-                                                                    <option value="TONS">TONS</option>
-                                                                    </select>
-                                                                </td>
-
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value="30000"></td>
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value="Finish Goods Polybag"></td>
+                                                                
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="quantity" class="form-control" value="500"></td>
                                                                                                                                     
+                                                                <td><input type="remarks" id="remarks" name="remarks" class="form-control" value=""></td>
                                                             </tr>
                                                             
                                                             <tr>
-                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                
+                                                                <td><select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
                                                                 <option value=""></option>
-                                                                    <option value="RAW-001">RAW-001</option>
-                                                                    <option value="FG-001">FG-001</option></select>
-                                                                </td>
+                                                                <option value="FG-001">FG-001</option>
+                                                                </select></td>
 
                                                                 <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
-
-                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                <option value=""></option>
-                                                                    <option value="KG">KG</option>
-                                                                    <option value="TONS">TONS</option>
-                                                                    </select>
-                                                                </td>
-
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control"></td>
+                                                                
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
                                                                                                                                     
+                                                                <td><input type="remarks" id="remarks" name="remarks" class="form-control" value=""></td>
                                                             </tr>
 
                                                             <tr>
-                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                
+                                                                <td><select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
                                                                 <option value=""></option>
-                                                                    <option value="RAW-001">RAW-001</option>
-                                                                    <option value="FG-001">FG-001</option></select>
-                                                                </td>
+                                                                <option value="FG-001">FG-001</option>
+                                                                </select></td>
 
                                                                 <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
-
-                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                <option value=""></option>
-                                                                    <option value="KG">KG</option></option>
-                                                                    <option value="TONS">TONS</option>
-                                                                    </select>
-                                                                </td>
-
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control"></td>
+                                                                
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
                                                                                                                                     
+                                                                <td><input type="remarks" id="remarks" name="remarks" class="form-control" value=""></td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                
+                                                                <td><select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value=""></option>
+                                                                <option value="FG-001">FG-001</option>
+                                                                </select></td>
+
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
+                                                                
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
+                                                                                                                                    
+                                                                <td><input type="remarks" id="remarks" name="remarks" class="form-control" value=""></td>
                                                             </tr>
 
                                             
@@ -427,22 +487,16 @@
                                                     var table = document.getElementById("BOM");
                                                     var trlen = table.getElementsByTagName("tr").length;
                                                     console.log(trlen);
-                                                    let html = `<td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                    let html = `<td><select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
                                                                 <option value=""></option>
-                                                                    <option value="RAW-001">RAW-001</option>
-                                                                    <option value="FG-001">FG-001</option></select>
-                                                                </td>
+                                                                <option value="FG-001">FG-001</option>
+                                                                </select></td>
 
                                                                 <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
-
-                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                <option value=""></option>
-                                                                    <option value="KG">KG</option></option>
-                                                                    <option value="TONS">TONS</option>
-                                                                    </select>
-                                                                </td>
-
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control"></td>`;
+                                                                
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
+                                                                                                                                    
+                                                                <td><input type="remarks" id="remarks" name="remarks" class="form-control" value=""></td>`;
                                                     var row = table.insertRow(Number(trlen));
                                                     row.innerHTML = html;
                                                                                                         }
@@ -451,17 +505,19 @@
 
                                                     <script>
                                                         function read(e){
-                                                            let code = document.getElementById("code-item").value;
+                                                            let jo = document.getElementById("jo").value;
+                                                            let code = document.getElementById("code-item");
                                                             let nama = document.getElementById("nama-item");
-                                                            let unit = document.getElementById("unit");
+                                                            let quantity = document.getElementById("quantity");
                                                         
-                                                            if (code == "RAW-001") {
+                                                            if (jo == "JO-00001") {
+                                                                code.value = "FG-001"; 
+                                                                nama.value = "Finish Goods Polybag";
+                                                                quantity.value = "500";
+                                                            } else { (code == "RW-001")
                                                                 nama.value = "PLASTIC"; 
-                                                                unit.value = "KG"
-                                                            } else {
-                                                                nama.value = "Finish Polybag"; 
-                                                                unit.value = "KG";
                                                             }
+                                                            
                                                         
                                                         }
                                                     </script>

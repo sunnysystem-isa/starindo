@@ -159,10 +159,10 @@
                 <thead>
                     <tr>
                         <th style="text-align: center">No</th>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
+                        <th>No. BOM</th>
+                        <th>Manufacture Item</th>
                         <th>Location Process</th>
-                        <th>Compar Qty.</th>
+                        <th>Raw Material Qty.</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -171,12 +171,11 @@
                     @endphp
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-design">FG-001</a></td>
-                            <td>Finish Goods Polybag</td>
+                            <td><a href="/view-design">BOM-001</a></td>
+                            <td>Finish Polybag</td>
                             <td>Production</td>
-                            <td>1:1</td>
-                            <td></td>
-                            <td></td>
+                            <td>1</td>
+                            
                             
                         </tr>              
 
@@ -225,7 +224,7 @@
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Item Code</span>
+                            <span>No. BOM</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
@@ -241,14 +240,17 @@
                     <!--begin::Input group Website-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="fs-6 fw-bold form-label mt-3">
-                            <span class="">Item Name</span>
+                        <label class="fs-6 fw-bold form-label mt-3 required">
+                            <span>Manufacture Item</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input type="email" class="form-control form-control-solid" 
-                        id="email" name="email" value="{{ old('email') }}" placeholder="Item Name" />
-                        @error('email')
+                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                        <option value=""></option>
+                        <option value="Plastic">PLASTIC</option>
+                        <option value="Finish Polybag">Finish Polybag</option>
+                        </select>
+                        @error('Customer')
                         <h6 class="text-danger fw-normal">{{ $message }}</h6>
                         @enderror
                         <!--end::Input-->

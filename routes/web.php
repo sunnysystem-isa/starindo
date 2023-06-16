@@ -269,6 +269,10 @@ Route::group(['middleware' => ["auth"]], function () {
         
         return redirect("/$tittle");
     });
+
+    Route::get('/machine', function () {
+        return view('machine');
+    });
     // End :: Master Data
     
     
@@ -288,6 +292,22 @@ Route::group(['middleware' => ["auth"]], function () {
 
     Route::get('/view-job-order', function () {
         return view('view_job_order');
+    });
+
+    Route::get('/goods-receipt', function () {
+        return view('goods_receipt');
+    });
+
+    Route::get('/view-goods-receipt', function () {
+        return view('view_goods_receipt');
+    });
+
+    Route::get('/machine', function () {
+        return view('machine');
+    });
+
+    Route::get('/view-machine', function () {
+        return view('view_machine');
     });
     
 
