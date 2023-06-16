@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Goods Receipt')
+@section('title', 'Procure to Pay')
 
 @section('container')
 
@@ -15,7 +15,7 @@
                 data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                 class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Goods Receipt
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Procure to Pay
                     <!--begin::Separator-->
                     {{-- <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span> --}}
                     <!--end::Separator-->
@@ -159,13 +159,13 @@
                 <thead>
                     <tr>
                         <th style="text-align: center">No</th>
-                        <th>No. Goods Receipt</th>
-                        <th>Factory</th>
-                        <th>Location In</th>
-                        <th>Item Name</th>
-                        <th>Qty.</th>
-                        <th>Job Order</th>
-                        <th>Print</th>
+                        <th>No. Procure to Pay</th>
+                        <th>Customer/Vendor</th>
+                        <th>PIC</th>
+                        <th>Location Out</th>
+                        <th>Payment Terms</th>
+                        <th>Created Date</th>
+                        <th>Attachment</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -174,14 +174,13 @@
                     @endphp
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-job-order">GR-00001</a></td>
-                            <td>Production</td>
-                            <td>Main Inventory</td>
-                            <td>Finish Goods Polybag</td>
-                            <td>500</td>
-                            <td><a href="/view-job-order">JO-00001</a></td>
-                            <td><a href="#">Print</a></td>
-                            
+                            <td><a href="/view-procure-to-pay">PTP-00001</a></td>
+                            <td><a href="#">Our Company</a></td>
+                            <td>Admin</td>
+                            <td>Bag Making</td>
+                            <td>5</td>
+                            <td>16 Juni 2023</td>
+                            <td><a href="#">Detail</a></td>
                         </tr>              
                 </tbody>
                 
@@ -206,7 +205,7 @@
                 <!--begin::Modal header-->
                 <div class="modal-header">
                     <!--begin::Modal title-->
-                    <h2>New Contact</h2>
+                    <h2>New Procure to Pay</h2>
                     <!--end::Modal title-->
                     <!--begin::Close-->
                     <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
@@ -227,12 +226,12 @@
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>No. Job Order</span>
+                            <span>No. Procure to Pay</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
                         <input type="text" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
-                        value="{{ old('no-job-order') }}" placeholder="No. Job Order" />
+                        value="{{ old('no-job-order') }}" placeholder="No. Procure to Pay" />
                         @error('no-job-order')
                         <h6 class="text-danger fw-normal">{{ $message }}</h6>
                         @enderror
@@ -240,54 +239,108 @@
                     </div>
                     <!--end::Input group-->
 
-                    <!--begin::Input group Website-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Delivery Date</span>
-                        </label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <input type="date" id="date" name="date" class="form-control form-control-solid" 
-                        value="" placeholder="Date" />
-                        @error('date')
-                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                        @enderror
-                        <!--end::Input-->
+                    <div class="row fv-row">
+                        <div class="col-6">
+                            <!--begin::Input group Website-->
+                            <div class="fv-row mb-7">
+                                <!--begin::Label-->
+                                <label class="fs-6 fw-bold form-label mt-3 required">
+                                    <span>Create Date</span>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="date" id="date" name="date" class="form-control form-control-solid" 
+                                value="" placeholder="Date" />
+                                @error('date')
+                                <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                @enderror
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <div class="col-6">
+                            <!--begin::Input group Website-->
+                            <div class="fv-row mb-7">
+                                <!--begin::Label-->
+                                <label class="fs-6 fw-bold form-label mt-3 required">
+                                    <span>Customer/Vendor</span>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <select name="type" id="unit" class="form-select form-select-solid" data-hide-search="true" data-placeholder="Select Customer/Vendor">
+                                <option value="Ferbyansah">Ferbyansah</option>
+                                </select>
+                                @error('Customer')
+                                <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                @enderror
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
                     </div>
-                    <!--end::Input group-->
 
-                    <!--begin::Input group Website-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>Customer</span>
-                        </label>
-                        <!--end::Label-->
-                        <!--begin::Input-->
-                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                        <option value="Ferbyansah">Ferbyansah</option>
-                        </select>
-                        @error('Customer')
-                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                        @enderror
-                        <!--end::Input-->
+                    <div class="row fv-row">
+                        <div class="col-4">
+                            <!--begin::Input group Website-->
+                            <div class="fv-row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="fs-6 fw-bold form-label mt-3">
+                                    <span>PIC</span>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="text" class="form-control form-control-solid" 
+                                id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <div class="col-4">
+                            <!--begin::Input group Website-->
+                            <div class="fv-row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="fs-6 fw-bold form-label mt-3">
+                                    <span>Location Out</span>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <select name="location-out" id="location-out" class="form-select form-select-solid" data-hide-search="true" placeholder="Select Location Out">
+                                    <option value="">Bag Making</option>
+                                </select>
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <div class="col-4">
+                            <!--begin::Input group Website-->
+                            <div class="fv-row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="fs-6 fw-bold form-label mt-3">
+                                    <span>Payment Terms</span>
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="number" name="payment-terms" id="payment-terms" class="form-control form-control-solid">
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
                     </div>
-                    <!--end::Input group-->
-
+                    
                     <!--begin::Input group Website-->
                     <div class="fv-row mb-6">
-                            <!--begin::Label-->
-                            <label class="fs-6 fw-bold form-label mt-3">
-                            <span>PIC</span>
+                        <!--begin::Label-->
+                        <label class="fs-6 fw-bold form-label mt-3">
+                            <span>Attachment</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input type="text" class="form-control form-control-solid" 
+                        <input type="file" class="form-control form-control-solid" 
                         id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
                         <!--end::Input-->
                     </div>
-                    <!--end::Input group-->
+                <!--end::Input group-->
+                    
 
 
                     <div class="modal-footer">
