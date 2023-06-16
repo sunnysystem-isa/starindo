@@ -293,7 +293,6 @@ Route::group(['middleware' => ["auth"]], function () {
     Route::get('/view-job-order', function () {
         return view('view_job_order');
     });
-
     Route::get('/goods-receipt', function () {
         return view('goods_receipt');
     });
@@ -308,6 +307,14 @@ Route::group(['middleware' => ["auth"]], function () {
 
     Route::get('/view-machine', function () {
         return view('view_machine');
+    });
+
+    Route::get('/procure-to-pay', function () {
+        return view('procure_to_pay');
+    });
+    
+    Route::get('/view-procure-to-pay', function () {
+        return view('view_procure_to_pay');
     });
     
 
