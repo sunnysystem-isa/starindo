@@ -216,8 +216,10 @@ Route::group(['middleware' => ["auth"]], function () {
         $tittle = "Items";
         $column_2 = 'deskripsi';
         $column_2_name = 'Unit';
+        $column_3 = 'qty';
+        $column_3_name = 'Qty';
         $data = MasterData::where("jenis", "=", $tittle)->get();
-        return view('Master/master', compact(['data', 'tittle', 'column_2', 'column_2_name']));
+        return view('Master/master', compact(['data', 'tittle', 'column_2', 'column_2_name', 'column_3_name', 'column_3']));
     });
     
     Route::get('/Location', function () {
@@ -236,6 +238,9 @@ Route::group(['middleware' => ["auth"]], function () {
         $newData->code = $data["code"];
         $newData->category = $data["category"];
         $newData->deskripsi = $data["deskripsi"];
+        if($data["qty"]){
+            $newData->qty = $data["qty"];
+        }
         $newData->jenis = $tittle;
         
         
@@ -253,7 +258,9 @@ Route::group(['middleware' => ["auth"]], function () {
         $newData->code = $data["code"];
         $newData->category = $data["category"];
         $newData->deskripsi = $data["deskripsi"];
-        
+        if($data["qty"]){
+            $newData->qty = $data["qty"];
+        }
         Alert::success('Success', "Master Data Berhasil Diubah")->autoClose(3000);
         $newData->save();
         
@@ -315,6 +322,11 @@ Route::group(['middleware' => ["auth"]], function () {
     
     Route::get('/view-procure-to-pay', function () {
         return view('view_procure_to_pay');
+    });
+    
+    Route::get('/promised-delivery', function () {
+        $data = MasterData::where('jenis', '=', 'Items')->get();
+        return view('promised_delivery', compact(['data']));
     });
     
 

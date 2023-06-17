@@ -129,7 +129,7 @@
                 <!--end:Menu item-->
                 <!--begin:Menu item-->
                 <div class="menu-item">
-                <a class="menu-link" {!! str_contains(Request::Path(), 'good-receipt') ? $activePage : '' !!}  href="/goods-receipt">
+                <a class="menu-link" {!! str_contains(Request::Path(), 'goods-receipt') ? $activePage : '' !!}  href="/goods-receipt">
                     <span class="me-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.3" d="M17.9061 13H11.2061C11.2061 12.4 10.8061 12 10.2061 12C9.60605 12 9.20605 12.4 9.20605 13H6.50606L9.20605 8.40002V4C8.60605 4 8.20605 3.6 8.20605 3C8.20605 2.4 8.60605 2 9.20605 2H15.2061C15.8061 2 16.2061 2.4 16.2061 3C16.2061 3.6 15.8061 4 15.2061 4V8.40002L17.9061 13ZM13.2061 9C12.6061 9 12.2061 9.4 12.2061 10C12.2061 10.6 12.6061 11 13.2061 11C13.8061 11 14.2061 10.6 14.2061 10C14.2061 9.4 13.8061 9 13.2061 9Z" fill="white"/>
@@ -140,8 +140,8 @@
                 </a>
             </div>
             <!--end:Menu item-->
-                <!--begin:Menu item-->
-                <div class="menu-item">
+            <!--begin:Menu item-->
+            <div class="menu-item">
                 <a class="menu-link" {!! str_contains(Request::Path(), 'procure-to-pay') ? $activePage : '' !!}  href="/procure-to-pay">
                     <span class="me-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,6 +152,19 @@
                             </svg>
                     </span>
                     <span style="font-size: 16px" class="menu-title text-white">Procure to Pay</span>
+                </a>
+            </div>
+            <!--end:Menu item-->
+            <!--begin:Menu item-->
+            <div class="menu-item">
+                <a class="menu-link" {!! str_contains(Request::Path(), 'promised-delivery') ? $activePage : '' !!}  href="/promised-delivery">
+                    <span class="me-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3" d="M3 3V17H7V21H15V9H20V3H3Z" fill="white"/>
+                            <path d="M20 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V21C21 21.6 20.6 22 20 22ZM19 4H4V8H19V4ZM6 18H4V20H6V18ZM6 14H4V16H6V14ZM6 10H4V12H6V10ZM10 18H8V20H10V18ZM10 14H8V16H10V14ZM10 10H8V12H10V10ZM14 18H12V20H14V18ZM14 14H12V16H14V14ZM14 10H12V12H14V10ZM19 14H17V20H19V14ZM19 10H17V12H19V10Z" fill="white"/>
+                        </svg>
+                    </span>
+                    <span style="font-size: 16px" class="menu-title text-white">Promised Delivery </span>
                 </a>
             </div>
             <!--end:Menu item-->
@@ -228,7 +241,7 @@
                     </div>
                     <!--end:Item Collapse-->
                     <!--begin:Item Collapse-->
-                    <div class="menu-item" {!! str_contains(Request::Path(), 'Location') ? $activePage : '' !!}>
+                    <div class="menu-item" {!! str_contains(Request::Path(), 'machine') ? $activePage : '' !!}>
                         <a class="menu-link" href="/machine">
                             <span class="menu-link">
                                 <span class="menu-bullet">

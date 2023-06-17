@@ -147,28 +147,37 @@
             @csrf
             <div class="mb-3">
                 <label for="name" class="required form-label">Name</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Input Name" required>
             </div>
             <div class="mb-3">
                 <label for="column" class="required form-label">Code</label>
-                <input type="text" name="code" class="form-control" id="code" placeholder="code" required>
+                <input type="text" name="code" class="form-control" id="code" placeholder="Input Code" required>
             </div>
             <div class="mb-3">
                 <label for="column" class="required form-label">Category</label>
-                <input type="text" name="category" class="form-control" id="category" placeholder="category" required>
+                <input type="text" name="category" class="form-control" id="category" placeholder="Input Category" required>
             </div>
             <div class="mb-3">
-                <label for="column" class="form-label">Deskripsi</label>
                 @if ($tittle != 'Items')
-                <input type="text" name="deskripsi" class="form-control" id="deskripsi" placeholder="deskripsi" required>
+                <label for="column" class="form-label">Deskripsi</label>
+                <input type="text" name="deskripsi" class="form-control" id="deskripsi" placeholder="Input Deskripsi" required>
                 @else
+                <label for="column" class="form-label">Unit</label>
                 <select name="deskripsi" class="form-select" data-control="select2" data-hide-search="false" data-placeholder="Satuan">
                     <option value=""></option>
+                    <option value="PCS">PCS</option>
                     <option value="TON">TON</option>
                     <option value="KG">KG</option>
+                    <option value="ROLL">ROLL</option>
                 </select>
                 @endif
             </div>
+            @if ($tittle == "Items")
+            <div class="mb-3">
+                <label for="column" class="required form-label">Qty</label>
+                <input type="number" name="qty" class="form-control" id="qty" step="0.01" placeholder="Input Quantity" required>
+            </div>
+            @endif
             <p class="text-danger" id="req-field" style="display: none">Mandatori Field Harus Diisi !</p>
           
         </div>
@@ -239,17 +248,26 @@
                     <input type="text" value="{{ $d->category }}" name="category" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label for="column" class="required form-label">Deskripsi</label>
                     @if ($tittle != 'Items')
+                    <label for="column" class="required form-label">Deskripsi</label>
                     <input type="text" value="{{ $d->deskripsi }}" name="deskripsi" class="form-control">
                     @else
+                    <label for="column" class="required form-label">Unit</label>
                     <select name="deskripsi" class="form-select" data-control="select2" data-hide-search="false" data-placeholder="Satuan">
                         <option value=""></option>
+                        <option value="PCS" {{ $d->deskripsi == "PCS" ? 'selected' : '' }}>PCS</option>
                         <option value="TON" {{ $d->deskripsi == "TON" ? 'selected' : '' }}>TON</option>
                         <option value="KG" {{ $d->deskripsi == "KG" ? 'selected' : '' }}>KG</option>
+                        <option value="ROLL" {{ $d->deskripsi == "ROLL" ? 'selected' : '' }}>ROLL</option>
                     </select>
                     @endif
                 </div>
+                @if ($tittle == "Items")
+                <div class="mb-3">
+                    <label for="column" class="required form-label">Qty</label>
+                    <input type="number" name="qty" class="form-control" id="qty" step="0.01" value="{{ $d->qty }}" placeholder="Input Quantity" required>
+                </div>
+                @endif
             </div>
             <div class="modal-footer">
             {{-- <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Cancel</button> --}}
