@@ -29,7 +29,7 @@ function alter_table(string $class, string $column_name, DataType $data_type, in
  * 
  * @return Model
  */
-function getAllModelData(string $model, $filters = "", $show_columns, $primaryKey = "id") {
+function getAllModelData(string $model, $filters, $show_columns, $primaryKey = "id") {
     if(!is_array($filters)) {
         $filters = collect(json_decode($filters));
     }

@@ -345,6 +345,14 @@ Route::group(['middleware' => ["auth"]], function () {
         return view('promised_delivery', compact(['data']));
     });
     
+    
+    Route::get('/page', function () {
+        $tittle = "Testing";
+        return view('generate_pdf', compact(['tittle']));
+    });
+
+    
+    
 
 // End :: Group Route
 });
