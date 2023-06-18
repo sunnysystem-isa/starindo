@@ -344,6 +344,15 @@ Route::group(['middleware' => ["auth"]], function () {
         $data = MasterData::where('jenis', '=', 'Items')->get();
         return view('promised_delivery', compact(['data']));
     });
+
+    Route::get('/download', function () {
+        $file = public_path()."\assets\document\Template_Download_JO.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Job Order.pdf", $headers);
+    });
     
     
     Route::get('/page', function () {
