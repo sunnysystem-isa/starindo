@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Procure to Pay')
+@section('title', 'Contacts')
 
 @section('container')
 
@@ -15,7 +15,7 @@
                 data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                 class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Procure to Pay
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Calculate BOM
                     <!--begin::Separator-->
                     {{-- <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span> --}}
                     <!--end::Separator-->
@@ -159,13 +159,10 @@
                 <thead>
                     <tr>
                         <th style="text-align: center">No</th>
-                        <th>No. Procure to Pay</th>
-                        <th>Customer/Vendor</th>
-                        <th>PIC</th>
-                        <th>Location Out</th>
-                        <th>Payment Terms</th>
-                        <th>Created Date</th>
-                        <th>Attachment</th>
+                        
+                        <th>Manufacture Item</th>
+                        <th>Location Process</th>
+                        <th>Raw Material Qty.</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -174,91 +171,17 @@
                     @endphp
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00001</a></td>
-                            <td><a href="#">Our Company</a></td>
-                            <td>Admin</td>
-                            <td>Main Warehouse</td>
-                            <td>5</td>
-                            <td>16 Juni 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr>
-                        
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00002</a></td>
-                            <td><a href="#">PT Palugada</a></td>
-                            <td>Admin</td>
+                            <td><a href="/view-calculate-bom">Finish Polybag</a></td>
                             <td>Production</td>
                             <td>3</td>
-                            <td>16 Juni 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
+                        </tr>              
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00003</a></td>
-                            <td><a href="#">PT Palugada</a></td>
-                            <td>Admin</td>
+                            <td><a href="/view-calculate-bom2">Sealed Cup</a></td>
                             <td>Production</td>
-                            <td>1</td>
-                            <td>22 Mei 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
-
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00004</a></td>
-                            <td><a href="#">Our Company</a></td>
-                            <td>Admin</td>
-                            <td>Main Warehouse</td>
                             <td>2</td>
-                            <td>11 Mei 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
-
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00005</a></td>
-                            <td><a href="#">PT Maju Sejahtera</a></td>
-                            <td>Admin</td>
-                            <td>Main Warehouse</td>
-                            <td>4</td>
-                            <td>28 April 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
-
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00006</a></td>
-                            <td><a href="#">PT Maju Sejahtera</a></td>
-                            <td>Admin</td>
-                            <td>Production</td>
-                            <td>5</td>
-                            <td>8 April 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
-
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00007</a></td>
-                            <td><a href="#">PT Palugada</a></td>
-                            <td>Admin</td>
-                            <td>Main Warehouse</td>
-                            <td>2</td>
-                            <td>2 April 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
-
-                        <tr>
-                            <td style="text-align:center">{{ $no++ }}</td>
-                            <td><a href="/view-procure-to-pay">PTP-00008</a></td>
-                            <td><a href="#">Our Company</a></td>
-                            <td>Admin</td>
-                            <td>Main Warehouse</td>
-                            <td>2</td>
-                            <td>20 Maret 2023</td>
-                            <td><a href="#">Detail</a></td>
-                        </tr> 
+                        </tr>  
                 </tbody>
                 
             </table>
@@ -282,7 +205,7 @@
                 <!--begin::Modal header-->
                 <div class="modal-header">
                     <!--begin::Modal title-->
-                    <h2>New Procure to Pay</h2>
+                    <h2>New Contact</h2>
                     <!--end::Modal title-->
                     <!--begin::Close-->
                     <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
@@ -299,125 +222,58 @@
                 <!--begin::Modal body-->
                 <div class="modal-body py-lg-6 px-lg-6">
 
+                    
                     <!--begin::Input group Website-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3 required">
-                            <span>No. Procure to Pay</span>
+                            <span>Manufacture Item</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input type="text" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
-                        value="{{ old('no-job-order') }}" placeholder="No. Procure to Pay" />
-                        @error('no-job-order')
+                        <select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                        <option value=""></option>
+                        <option value="Plastic">PLASTIC</option>
+                        <option value="Finish Polybag">Finish Polybag</option>
+                        </select>
+                        @error('Customer')
                         <h6 class="text-danger fw-normal">{{ $message }}</h6>
                         @enderror
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
 
-                    <div class="row fv-row">
-                        <div class="col-6">
-                            <!--begin::Input group Website-->
-                            <div class="fv-row mb-7">
-                                <!--begin::Label-->
-                                <label class="fs-6 fw-bold form-label mt-3 required">
-                                    <span>Create Date</span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <input type="date" id="date" name="date" class="form-control form-control-solid" 
-                                value="" placeholder="Date" />
-                                @error('date')
-                                <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                                @enderror
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                        </div>
-                        <div class="col-6">
-                            <!--begin::Input group Website-->
-                            <div class="fv-row mb-7">
-                                <!--begin::Label-->
-                                <label class="fs-6 fw-bold form-label mt-3 required">
-                                    <span>Customer/Vendor</span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <select name="type" id="unit" class="form-select form-select-solid" data-hide-search="true" data-placeholder="Select Customer/Vendor">
-                                <option value="Ferbyansah">Ferbyansah</option>
-                                </select>
-                                @error('Customer')
-                                <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                                @enderror
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                        </div>
-                    </div>
 
-                    <div class="row fv-row">
-                        <div class="col-4">
-                            <!--begin::Input group Website-->
-                            <div class="fv-row mb-6">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-bold form-label mt-3">
-                                    <span>PIC</span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <input type="text" class="form-control form-control-solid" 
-                                id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                        </div>
-                        <div class="col-4">
-                            <!--begin::Input group Website-->
-                            <div class="fv-row mb-6">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-bold form-label mt-3">
-                                    <span>Location Out</span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <select name="location-out" id="location-out" class="form-select form-select-solid" data-hide-search="true" placeholder="Select Location Out">
-                                    <option value="">Production</option>
-                                </select>
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                        </div>
-                        <div class="col-4">
-                            <!--begin::Input group Website-->
-                            <div class="fv-row mb-6">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-bold form-label mt-3">
-                                    <span>Payment Terms</span>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <input type="number" name="payment-terms" id="payment-terms" class="form-control form-control-solid">
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                        </div>
-                    </div>
-                    
                     <!--begin::Input group Website-->
                     <div class="fv-row mb-6">
                         <!--begin::Label-->
                         <label class="fs-6 fw-bold form-label mt-3">
-                            <span>Attachment</span>
+                            <span class="">Location Process</span>
                         </label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input type="file" class="form-control form-control-solid" 
-                        id="customer-number" name="customer-number" value="Admin" placeholder="Customer Number" readOnly/>
+                        <input type="number" class="form-control form-control-solid" 
+                        id="mobile-phone" name="mobile-phone" value="{{ old('mobile-phone') }}" placeholder="Location Process" />
+                        @error('mobile-phone')
+                        <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                        @enderror
                         <!--end::Input-->
                     </div>
-                <!--end::Input group-->
-                    
+                    <!--end::Input group-->
+
+                    {{-- <!--begin::Input group Website-->
+                    <div class="fv-row mb-6">
+                            <!--begin::Label-->
+                            <label class="fs-6 fw-bold form-label mt-3">
+                            <span>Customer Number</span>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <input type="text" class="form-control form-control-solid" 
+                        id="customer-number" name="customer-number" value="" placeholder="Customer Number" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group--> --}}
 
 
                     <div class="modal-footer">

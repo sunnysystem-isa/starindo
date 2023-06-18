@@ -177,12 +177,96 @@
                             <td><a href="/view-job-order">JO-00001</a></td>
                             <td>Ferbyansah</td>
                             <td>Finish Goods Polybag</td>
-                            <td>500</td>
+                            <td>100000</td>
                             <td>Admin</td>
                             <td>In progess</td>
                             <td><a href="#">Print</a></td>
                             
-                        </tr>              
+                        </tr> 
+                        
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00002</a></td>
+                            <td>Alexander</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>7000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00003</a></td>
+                            <td>Baker</td>
+                            <td>Sealed Cup</td>
+                            <td>3000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00004</a></td>
+                            <td>Ferbyansah</td>
+                            <td>Sealed Cup</td>
+                            <td>23000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00005</a></td>
+                            <td>Alexander</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>2000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00006</a></td>
+                            <td>Baker</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>6700</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00007</a></td>
+                            <td>Ahmad</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>60000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00008</a></td>
+                            <td>Alexander</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>10000</td>
+                            <td>Admin</td>
+                            <td>Complete</td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr>
                 </tbody>
                 
             </table>

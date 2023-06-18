@@ -42,21 +42,33 @@
     <!--end::Toolbar-->
 
     <div class="col-xl-15 mb-8 mx-6">
-        <div class="card card-flush h-lg-100" id="kt_contacts_main">
-            <div class="card-body pt-auto" style="background-color:#f1f1f1; border:1px solid #e6e6e6;">
-                <div id="stage-button" class="stage-list">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
-                    New</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
-                    In Progress</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; pointer-events: none;">
-                    Complete</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#mundur-stage" class="stage-button stage-action color-is-default stage-is-done" style="outline: 0px; cursor: pointer; ">
-                    Cancel</a>
+            <div class="card card-flush h-lg-100" id="kt_contacts_main">
+                <div class="card-body pt-auto" style="background-color:#f1f1f1; border:1px solid #e6e6e6;">
+                    <div id="stage-button" class="stage-list">
+                        <a href="#" data-bs-toggle="modal" data-bs-target=""
+                            class="stage-button stage-action color-is-default stage-is-done"
+                            style="outline: 0px; cursor: pointer; pointer-events: none;">
+                            New</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target=""
+                            class="stage-button stage-action color-is-default stage-is-done"
+                            style="outline: 0px; cursor: pointer; pointer-events: none;">
+                            In Progress</a>
+                        {{-- <a href="#" data-bs-toggle="modal" data-bs-target="" class="stage-button stage-action color-is-default" style="outline: 0px; cursor: pointer; pointer-events: none;">
+                    Complete</a> --}}
+                        <a href="#" data-bs-toggle="dropdown" role="button"
+                            class="stage-button d-flex align-items-center color-is-default"
+                            style="outline: 0px; cursor: pointer; ">
+                            <span>Complete</span>
+                            <i class="bi bi-caret-down-fill text-white ms-3"></i>
+                        </a>
+                        <ul class="dropdown-menu" id="cancel" aria-labelledby="cancel">
+                            <li><a class="dropdown-item" href="#">Complete</a></li>
+                            <li><a class="dropdown-item" href="#">Cancel</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     
 
@@ -177,10 +189,7 @@
                              <!--begin:::Tabs-->
                              <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
                                 <!--begin:::Tab Overview-->
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_contact_overview"
-                                        style="font-size:12px;">OVERVIEW</a>
-                                </li> -->
+                                
                                 <!--end:::Tab Overview-->
 
                                 <!--begin:::Tab item Informasi Perusahaan-->
@@ -188,15 +197,22 @@
                                     <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_contact_information" style="font-size:12px;">GENERAL
                                         INFORMATION</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_contact_overview"
+                                        style="font-size:12px;">PRODUCTION</a>
+                                </li>
+
+                                
                                 <!--end:::Tab item Informasi Perusahaan-->
 
 
-                                {{-- <!--begin:::Tab item History-->
+                               <!--begin:::Tab item History-->
                                 <!-- <li class="nav-item">
                                     <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_user_view_flight"
                                         style="font-size:12px;">FLIGHT INFO</a>
                                 </li> -->
-                                <!--end:::Tab item History--> --}}
+                                <!--end:::Tab item History--> 
 
                                 <!--begin:::Tab item History-->
                                 <!-- <li class="nav-item">
@@ -213,142 +229,58 @@
                                 <!--Begin::Tab Overview-->
                                 <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                     <div class="container">
-                                        <div class="row fv-row">
-                                            <!--begin::All-About-Flight-->
-                                            <div id="collaps-1" class="mb-7 mt-5">
-                                                <h2 class="fw-bolder m-0" id="HeadDetail" style="font-size:14px;">Overview
-                                                    <i onclick="hideColumn(this, '#Flight')" id="hide-button" class="bi bi-arrows-collapse"></i>
-                                                    <i onclick="showColumn(this, '#Flight')" id="show-button" class="bi bi-arrows-expand" style="display: none"></i>
-                                                </h2>
-        
-                                                <div id="Flight" class="m-2 my-6" style="display:">
-                                                    <!--begin::Card Status-->
-                                                    <div class="row mx-3">
-                                                        <!--begin::Card column-->
-                                                        <div class="col-4">
-                                                            <!--begin::Card body-->
-                                                            <div class="card-body p-0">
-                                                                <!--begin::Card widget 20-->
-                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[0] }} ;background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
-                                                                    <!--begin::Header-->
-                                                                    <div class="card-header pt-5">
-                                                                        <!--begin::Title-->
-                                                                        <div class="card-title d-flex align-items-center m-0">
-                                                                            <!--begin::Amount-->
-                                                                            <span class="fs-3 fw-bold text-white">Tier Miles</span>
-                                                                            <!--end::Amount-->
-                                                                        </div>
-                                                                        <!--end::Title-->
-                                                                    </div>
-                                                                    <!--end::Header-->
-                                                                    <!--begin::Card body-->
-                                                                    <div class="card-body d-flex align-items-end pt-0">
-                                                                        <!--begin::Progress-->
-                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
-                                                                            <h3 class="text-white opacity-75 fs-2hx">0.00</h3>
-                                                                        </div>
-                                                                        <!--end::Progress-->
-                                                                    </div>
-                                                                    <!--end::Card body-->
-                                                                </div>
-                                                                <!--end::Card widget 20-->
-                                                            </div>
-                                                            <!--end::Card body-->
-                                                        </div>
-                                                        <!--end-begin::Card column-->
-                                                        
-                                                        <!--begin::Card column-->
-                                                        <div class="col-4">
-                                                            <!--begin::Card body-->
-                                                            <div class="card-body p-0">
-                                                                <!--begin::Card widget 20-->
-                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[1] }};background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
-                                                                    <!--begin::Header-->
-                                                                    <div class="card-header pt-5">
-                                                                        <!--begin::Title-->
-                                                                        <div class="card-title d-flex align-items-center m-0">
-                                                                            <!--begin::Amount-->
-                                                                            <span class="fs-3 fw-bold text-white">Award Point</span>
-                                                                            <!--end::Amount-->
-                                                                        </div>
-                                                                        <!--end::Title-->
-                                                                    </div>
-                                                                    <!--end::Header-->
-                                                                    <!--begin::Card body-->
-                                                                    <div class="card-body d-flex align-items-end pt-0">
-                                                                        <!--begin::Progress-->
-                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
-                                                                            <h3 class="text-white opacity-75 fs-2hx">0.00</h3>
-                                                                        </div>
-                                                                        <!--end::Progress-->
-                                                                    </div>
-                                                                    <!--end::Card body-->
-                                                                </div>
-                                                                <!--end::Card widget 20-->
-                                                            </div>
-                                                            <!--end::Card body-->
-                                                        </div>
-                                                        <!--end-begin::Card column-->
-    
-                                                        <!--begin::Card column-->
-                                                        <div class="col-4">
-                                                            <!--begin::Card body-->
-                                                            <div class="card-body p-0">
-                                                                <!--begin::Card widget 20-->
-                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[2] }};background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
-                                                                    <!--begin::Header-->
-                                                                    <div class="card-header pt-5">
-                                                                        <!--begin::Title-->
-                                                                        <div class="card-title d-flex align-items-center text-center m-0">
-                                                                            <!--begin::Amount-->
-                                                                            <span class="fs-3 fw-bold text-white">Amount Spend for Ticket</span>
-                                                                            <!--end::Amount-->
-                                                                        </div>
-                                                                        <!--end::Title-->
-                                                                    </div>
-                                                                    <!--end::Header-->
-                                                                    <!--begin::Card body-->
-                                                                    <div class="card-body d-flex align-items-end pt-0">
-                                                                        <!--begin::Progress-->
-                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
-                                                                            <h3 class="text-white opacity-75 fs-2hx">Rp.0.00</h3>
-                                                                        </div>
-                                                                        <!--end::Progress-->
-                                                                    </div>
-                                                                    <!--end::Card body-->
-                                                                </div>
-                                                                <!--end::Card widget 20-->
-                                                            </div>
-                                                            <!--end::Card body-->
-                                                        </div>
-                                                        <!--end-begin::Card column-->
-                                                    </div>
-                                                    <!--end::Card Status-->
-                                                    <!--begin::Line Chart-->
-                                                    <div class="row mx-3">
-                                                        <!--begin::Card column-->
-                                                        <div class="col-12">
-                                                            <!--begin::Card body-->
-                                                            <div class="card-body pt-0">
-                                                                <!--begin::LINE CHART-->
-                                                                <figure class="highcharts-figure">
-                                                                    <div class="chart-outer" id="table-line">
-                                                                        <div id="chart-line" style="overflow: unset;" class="m-0"></div>
-                                                                        <!-- data table is inserted here -->
-                                                                    </div>
-                                                                </figure>
-                                                                <!--end::LINE CHART-->
-                                                            </div>
-                                                            <!--end::Card body-->
-                                                        </div>
-                                                        <!--end::Card column-->
-                                                    </div>
-                                                    <!--end::Line Chart-->
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <!--End::All-About-Flight-->
+                                    <div class="row fv-row">
+                                        <div class="row mb-7">
+                                            <h3>Remaining Product</h3>
                                         </div>
+                                                                                
+                                        <div class="row">
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Machine Code<i class="bi bi-lock-fill"></i></span>
+                                                </label>
+                                                <input type="text" name="material" id="material" value="MCH-001" class="form-control form-control-solid" placeholder="0" style="cursor:auto" readonly>
+                                            </div>
+                                        
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Machine Name<i class="bi bi-lock-fill"></i></span>
+                                                </label>
+                                                <input type="text" name="material" id="material" value="Production Machine" class="form-control form-control-solid" placeholder="0" style="cursor:auto" readonly>
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Location<i class="bi bi-lock-fill"></i></span>
+                                                </label>
+                                                <input type="text" name="location" id="location" value="Production" class="form-control form-control-solid" placeholder="0" style="cursor:auto" readonly>
+                                            </div>
+                                                                                        
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Item Name<i class="bi bi-lock-fill"></i></span>
+                                                </label>
+                                                <input type="text" name="material" id="material" value="Finish Goods Polybag" class="form-control form-control-solid" placeholder="0" style="cursor:auto" readonly>
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Qty out</span>
+                                                </label>
+                                                <input type="number" name="qtyout" id="qtyout" value="500" class="form-control form-control-solid" placeholder="0" style="cursor:auto">
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <label for="" class="mb-3">
+                                                    <span>Qty Remaining</span>
+                                                </label>
+                                                <input type="number" name="inventory-difference" id="inventory-difference" value="-99500" min="0" class="form-control form-control-solid" placeholder="0" style="cursor:auto" readonly>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                                 <!--End::Tab Overview-->
@@ -379,6 +311,19 @@
                                                 </div>
                                                 <!--End::Row-->
                                             </div>
+                                            <div class="col-6">
+                                                        <label class="fs-6 fw-bold form-label mt-3">Delivery To Promise</label>
+                                                        <select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                    
+                                                        <option value="JO-00001">DP-00001</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                    </br>
+                                                    </br>
+                                                    <a href="/promised-delivery" class="btn btn-secondary btn-sm me-2">View</a>
+                                                    </div>
+                                            </div>    
                                             <hr>
                                             <!--Begin::Row-->
                                             <div class="container">
@@ -406,7 +351,7 @@
                                                                     <option value=""></option></select>
                                                                 </td>
 
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value="500"></td>
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value="100000"></td>
                                                                                                                                     
                                                             </tr>
                                                             

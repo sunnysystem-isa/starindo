@@ -25,7 +25,7 @@
                 class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                 <!--begin::Title-->
                 <div class="d-flex flex-row justify-content-beetwen">
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">MCH-0001</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Sealed Cup</h1>
                 </div>
                 <!--end::Title-->
             </div>
@@ -33,7 +33,7 @@
             
             <div class="action">
                 <button class="btn btn-success btn-sm me-2" form="form-1">Save</button>
-                <a href="/machine" class="btn btn-sm btn-secondary">Cancel</a>
+                <a href="/bom-design" class="btn btn-sm btn-secondary">Cancel</a>
             </div>
 
         </div>
@@ -47,7 +47,77 @@
         <div id="kt_content_container" class="container-fluid">
             <div class="row g-7">
                 <!--Begin::Content Kanan-->
-                
+                <div class="col-lg-6 col-xl-3">
+                    <div class="row">
+                        <div id="content" class="mt-1 px-5">
+                            <div class="card card-flush">
+                                <div class="card-body pt-9 pb-4">
+                                    <form action="/contact/detail/update" method="post" id="form-1" onsubmit="return validateInputs(this)">
+                                        @csrf
+                                        <input type="hidden" name="id-contact" value="">
+                                        <!--begin::Input group Name-->
+                                        
+        
+                                        <!--begin::Input group Email-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span class="">Manufacture Item</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="text" class="form-control rounded-0 border-bottom-dashed border-top-0 border-left-0 border-right-0 p-0 " id="email" name="email"
+                                                value="Finish Polybag" placeholder="" />
+                                            @error('email')
+                                                <h6 class="text-danger">{{ $message }}eror</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+        
+                                        <!--begin::Input group Phone-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span class="">Location Process</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="text" class="form-control rounded-0 border-bottom-dashed border-top-0 border-left-0 border-right-0 p-0" id="mobile-phone"
+                                                name="mobile-phone" value="Production" placeholder="" />
+                                            @error('phone-number')
+                                                <h6 class="text-danger">{{ $message }}eror</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row mt-3">
+                        <div id="content" class="mt-1 px-5">
+                            <div class="card card-flush">
+                                <div class="card-body pt-9 pb-7">
+                                    <h5>Company</h5>
+                                    <a href="/company#modal" class="">
+                                        <p class="fs-6 fw-bold form-label mt-5 p-0 mb-0 btn btn-secondary p-2"> New Company </p>
+                                    </a>
+                                    <br>
+                                    <div id="select-account" style="display:none">
+                                        <label class="fs-6 fw-bold form-label mt-2">Search</label>
+                                        <div id="search">
+                                            <select name="account-id" class="form-select form-select-solid" data-control="select2" data-hide-search="false" data-placeholder="Search Account">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
                 <!--End::Content Kanan-->
 
                 <!--Begin::Content Kiri-->
@@ -69,6 +139,8 @@
                                     <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_contact_information" style="font-size:12px;">GENERAL
                                         INFORMATION</a>
                                 </li>
+
+                                
                                 <!--end:::Tab item Informasi Perusahaan-->
 
 
@@ -92,7 +164,146 @@
                             <!--Begin::Tab Panel-->
                             <div class="tab-content">
                                 <!--Begin::Tab Overview-->
-                                
+                                <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <div class="container">
+                                        <div class="row fv-row">
+                                            <!--begin::All-About-Flight-->
+                                            <div id="collaps-1" class="mb-7 mt-5">
+                                                <h2 class="fw-bolder m-0" id="HeadDetail" style="font-size:14px;">Overview
+                                                    <i onclick="hideColumn(this, '#Flight')" id="hide-button" class="bi bi-arrows-collapse"></i>
+                                                    <i onclick="showColumn(this, '#Flight')" id="show-button" class="bi bi-arrows-expand" style="display: none"></i>
+                                                </h2>
+        
+                                                <div id="Flight" class="m-2 my-6" style="display:">
+                                                    <!--begin::Card Status-->
+                                                    <div class="row mx-3">
+                                                        <!--begin::Card column-->
+                                                        <div class="col-4">
+                                                            <!--begin::Card body-->
+                                                            <div class="card-body p-0">
+                                                                <!--begin::Card widget 20-->
+                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[0] }} ;background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
+                                                                    <!--begin::Header-->
+                                                                    <div class="card-header pt-5">
+                                                                        <!--begin::Title-->
+                                                                        <div class="card-title d-flex align-items-center m-0">
+                                                                            <!--begin::Amount-->
+                                                                            <span class="fs-3 fw-bold text-white">Tier Miles</span>
+                                                                            <!--end::Amount-->
+                                                                        </div>
+                                                                        <!--end::Title-->
+                                                                    </div>
+                                                                    <!--end::Header-->
+                                                                    <!--begin::Card body-->
+                                                                    <div class="card-body d-flex align-items-end pt-0">
+                                                                        <!--begin::Progress-->
+                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
+                                                                            <h3 class="text-white opacity-75 fs-2hx">0.00</h3>
+                                                                        </div>
+                                                                        <!--end::Progress-->
+                                                                    </div>
+                                                                    <!--end::Card body-->
+                                                                </div>
+                                                                <!--end::Card widget 20-->
+                                                            </div>
+                                                            <!--end::Card body-->
+                                                        </div>
+                                                        <!--end-begin::Card column-->
+                                                        
+                                                        <!--begin::Card column-->
+                                                        <div class="col-4">
+                                                            <!--begin::Card body-->
+                                                            <div class="card-body p-0">
+                                                                <!--begin::Card widget 20-->
+                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[1] }};background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
+                                                                    <!--begin::Header-->
+                                                                    <div class="card-header pt-5">
+                                                                        <!--begin::Title-->
+                                                                        <div class="card-title d-flex align-items-center m-0">
+                                                                            <!--begin::Amount-->
+                                                                            <span class="fs-3 fw-bold text-white">Award Point</span>
+                                                                            <!--end::Amount-->
+                                                                        </div>
+                                                                        <!--end::Title-->
+                                                                    </div>
+                                                                    <!--end::Header-->
+                                                                    <!--begin::Card body-->
+                                                                    <div class="card-body d-flex align-items-end pt-0">
+                                                                        <!--begin::Progress-->
+                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
+                                                                            <h3 class="text-white opacity-75 fs-2hx">0.00</h3>
+                                                                        </div>
+                                                                        <!--end::Progress-->
+                                                                    </div>
+                                                                    <!--end::Card body-->
+                                                                </div>
+                                                                <!--end::Card widget 20-->
+                                                            </div>
+                                                            <!--end::Card body-->
+                                                        </div>
+                                                        <!--end-begin::Card column-->
+    
+                                                        <!--begin::Card column-->
+                                                        <div class="col-4">
+                                                            <!--begin::Card body-->
+                                                            <div class="card-body p-0">
+                                                                <!--begin::Card widget 20-->
+                                                                <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-90 mb-5 mb-xl-10 d-flex flex-column align-items-center" style="background-color: {{ $chart[2] }};background-image:url('/assets/media/patterns/vector-1.png');background-repeat: no-repeat;background-size: auto;">
+                                                                    <!--begin::Header-->
+                                                                    <div class="card-header pt-5">
+                                                                        <!--begin::Title-->
+                                                                        <div class="card-title d-flex align-items-center text-center m-0">
+                                                                            <!--begin::Amount-->
+                                                                            <span class="fs-3 fw-bold text-white">Amount Spend for Ticket</span>
+                                                                            <!--end::Amount-->
+                                                                        </div>
+                                                                        <!--end::Title-->
+                                                                    </div>
+                                                                    <!--end::Header-->
+                                                                    <!--begin::Card body-->
+                                                                    <div class="card-body d-flex align-items-end pt-0">
+                                                                        <!--begin::Progress-->
+                                                                        <div class="d-flex align-items-center flex-column mt-3 w-100">
+                                                                            <h3 class="text-white opacity-75 fs-2hx">Rp.0.00</h3>
+                                                                        </div>
+                                                                        <!--end::Progress-->
+                                                                    </div>
+                                                                    <!--end::Card body-->
+                                                                </div>
+                                                                <!--end::Card widget 20-->
+                                                            </div>
+                                                            <!--end::Card body-->
+                                                        </div>
+                                                        <!--end-begin::Card column-->
+                                                    </div>
+                                                    <!--end::Card Status-->
+                                                    <!--begin::Line Chart-->
+                                                    <div class="row mx-3">
+                                                        <!--begin::Card column-->
+                                                        <div class="col-12">
+                                                            <!--begin::Card body-->
+                                                            <div class="card-body pt-0">
+                                                                <!--begin::LINE CHART-->
+                                                                <figure class="highcharts-figure">
+                                                                    <div class="chart-outer" id="table-line">
+                                                                        <div id="chart-line" style="overflow: unset;" class="m-0"></div>
+                                                                        <!-- data table is inserted here -->
+                                                                    </div>
+                                                                </figure>
+                                                                <!--end::LINE CHART-->
+                                                            </div>
+                                                            <!--end::Card body-->
+                                                        </div>
+                                                        <!--end::Card column-->
+                                                    </div>
+                                                    <!--end::Line Chart-->
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <!--End::All-About-Flight-->
+                                        </div>
+                                    </div>
+                                </div>
                                 <!--End::Tab Overview-->
 
                                 <!--Begin::Tab Contact Information-->
@@ -101,39 +312,29 @@
                                             <div class="container">
                                                 <!--Begin::Row-->
                                                 <div class="row fv-row mb-7">
-                                                    
-                                                    <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Machine Code<i class="bi bi-lock-fill"></i></label>
-                                                        <input id="Machine Code"  type="text" class="form-control" value="MCH-0001" placeholder="" id="full-name" name="full-name" readonly>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Machine Name</label>
-                                                        <input id="Machine Name"  type="text" class="form-control" value="Production Machine" placeholder="" id="full-name" name="full-name">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Location</label>
+                                                    <!-- <div class="col-6">
+                                                        <label class="fs-6 fw-bold form-label mt-3">Title</label>
                                                         <div id="title">
-                                                            <select name="title" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="">
-                                                                <option value="Production">Production</option>
-                                                                <option value="Main Warehouse">Main Warehouse</option>
-                                                                <option value="Finishing">Finishing</option>  
+                                                            <select name="title" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select Title">
+                                                                <option value=""></option>
+                                                                    <option value="#N/A">#N/A</option>
+                                                                    <option value="Bapak">Bapak</option>
+                                                                    <option value="Ibu">Ibu</option>
+                                                                    <option value="Miss.">Mrs.</option>
+                                                                    <option value="Mr.">Mr.</option>
                                                             </select>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Job</label>
-                                                        <input id="Job"  type="text" class="form-control" value="Production Goods" placeholder="Job" id="full-name" name="full-name">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Working hour</label>
-                                                        <input id="Job"  type="text" class="form-control" value="6" placeholder="Job" id="full-name" name="full-name">
+                                                        <label class="fs-6 fw-bold form-label mt-3">Manufactured Qty</label>
+                                                        <input id="manufactur"  type="text" class="form-control" value="100" placeholder="" id="full-name" name="full-name">
                                                     </div>
                                                 </div>
                                                 <!--End::Row-->
                                             </div>
                                             <hr>
                                             <!--Begin::Row-->
-                                            <!-- <div class="container">
+                                            <div class="container">
                                                 <table id="example" class="table table-striped" style="width:100%">
                                                     <thead>
                                                         <tr>
@@ -146,21 +347,83 @@
                                                     <tbody id="BOM">
                                                             <tr>
                                                                 <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    <option value=""></option>
-                                                                    <option value="RAW-001">RAW-001</option></select>
+                                                                    
+                                                                    <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option></select>
                                                                 </td>
 
-                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control"></td>
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value="PLASTIC"></td>
 
                                                                 <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    <option value=""></option>
+                                                                    <option value="KG">KG</option></option>
                                                                     <option value="TONS">TONS</option>
-                                                                    <option value="KG">KG</option></select>
+                                                                    </select>
                                                                 </td>
 
-                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control"></td>
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value="1000"></td>
                                                                                                                                     
-                                                            </tr>              
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value="RAW-002">RAW-002</option>
+                                                                    <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option></select>
+                                                                </td>
+
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value="Serabut"></td>
+
+                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                
+                                                                    <option value="KG">KG</option>
+                                                                    <option value="TONS">TONS</option>
+                                                                    </select>
+                                                                </td>
+
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value="200" ></td>
+                                                                                                                                    
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value=""></option>
+                                                                <option value="">RAW-005</option>
+                                                                    <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option></select>
+                                                                </td>
+
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
+
+                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value=""></option>
+                                                                    <option value="KG">KG</option></option>
+                                                                    <option value="TONS">TONS</option>
+                                                                    </select>
+                                                                </td>
+
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
+                                                                                                                                    
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value=""></option>
+                                                                    <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option></select>
+                                                                </td>
+
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
+
+                                                                <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                                <option value=""></option>
+                                                                    <option value="KG">KG</option></option>
+                                                                    <option value="TONS">TONS</option>
+                                                                    </select>
+                                                                </td>
+
+                                                                <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control" value=""></td>
+                                                                                                                                    
+                                                            </tr>
 
                                             
                                                     </tbody>
@@ -173,17 +436,20 @@
                                                     var trlen = table.getElementsByTagName("tr").length;
                                                     console.log(trlen);
                                                     let html = `<td><select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    <option value=""></option>
-                                                                    <option value="RAW-001">RAW-001</option></select>
+                                                                <option value=""></option>
+                                                                    <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option></select>
                                                                 </td>
 
-                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control"></td>
+                                                                <td><input type="text" id="nama-item" name="nama-item" class="form-control" value=""></td>
 
                                                                 <td><select name="type" id="unit" class="form-select" data-hide-search="true" data-placeholder="Select Type">
-                                                                    <option value=""></option>
+                                                                <option value=""></option>
+                                                                    <option value="KG">KG</option></option>
                                                                     <option value="TONS">TONS</option>
-                                                                    <option value="KG">KG</option></select>
+                                                                    </select>
                                                                 </td>
+
                                                                 <td><input id="quantity" oninput="rumus(this)" type="number" name="" class="form-control"></td>`;
                                                     var row = table.insertRow(Number(trlen));
                                                     row.innerHTML = html;
@@ -195,11 +461,14 @@
                                                         function read(e){
                                                             let code = document.getElementById("code-item").value;
                                                             let nama = document.getElementById("nama-item");
+                                                            let unit = document.getElementById("unit");
                                                         
                                                             if (code == "RAW-001") {
                                                                 nama.value = "PLASTIC"; 
+                                                                unit.value = "KG"
                                                             } else {
-                                                                nama.value = ""; 
+                                                                nama.value = "Finish Polybag"; 
+                                                                unit.value = "KG";
                                                             }
                                                         
                                                         }
@@ -221,7 +490,7 @@
                                                     </script>
                                                     
                                                 </table>
-                                            </div> -->
+                                            </div>
                                             <!--End::Row-->
                                         </div>
                                     </form>

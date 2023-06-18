@@ -323,6 +323,22 @@ Route::group(['middleware' => ["auth"]], function () {
     Route::get('/view-procure-to-pay', function () {
         return view('view_procure_to_pay');
     });
+
+    Route::get('/head-promised-delivery', function () {
+        return view('head_promised_delivery');
+    });
+
+    Route::get('/calculate-bom', function () {
+        return view('calculate_bom');
+    });
+
+    Route::get('/view-calculate-bom', function () {
+        return view('view_calculate_bom');
+    });
+
+    Route::get('/view-calculate-bom2', function () {
+        return view('view_calculate_bom2');
+    });
     
     Route::get('/promised-delivery', function () {
         $data = MasterData::where('jenis', '=', 'Items')->get();

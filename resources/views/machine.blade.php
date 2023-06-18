@@ -177,7 +177,25 @@
                             <td>Production</td>
                             <td>Production Goods</td>
                                                         
-                        </tr>              
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-machine">MCH-0002</a></td>
+                            <td>Finishing Machine</td>
+                            <td>Finishing</td>
+                            <td>Finishing</td>
+                                                        
+                        </tr>   
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-machine">MCH-0003</a></td>
+                            <td>Pelleting Machine</td>
+                            <td>Pelleting</td>
+                            <td>Pelleting</td>
+                                                        
+                        </tr>   
                 </tbody>
                 
             </table>

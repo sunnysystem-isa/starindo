@@ -174,12 +174,16 @@
                             <td><a href="/view-design">BOM-001</a></td>
                             <td>Finish Polybag</td>
                             <td>Production</td>
-                            <td>1</td>
-                            
-                            
+                            <td>1</td> 
                         </tr>              
 
-        
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-design">BOM-002</a></td>
+                            <td>Sealed Cup</td>
+                            <td>Production</td>
+                            <td>1</td> 
+                        </tr>     
                 </tbody>
                 
             </table>

@@ -182,7 +182,79 @@
                             <td><a href="/view-job-order">JO-00001</a></td>
                             <td><a href="#">Print</a></td>
                             
-                        </tr>              
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00002</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Sealed Cup</td>
+                            
+                            <td><a href="/view-job-order">JO-00002</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00003</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Sealed Cup</td>
+                            
+                            <td><a href="/view-job-order">JO-00003</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00004</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Finish Goods Polybag</td>
+                            
+                            <td><a href="/view-job-order">JO-00004</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00005</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Finish Goods Polybag</td>
+                            
+                            <td><a href="/view-job-order">JO-00005</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00006</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Finish Goods Polybag</td>
+                            
+                            <td><a href="/view-job-order">JO-00006</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
+
+                        <tr>
+                            <td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-goods-receipt">GR-00007</a></td>
+                            <td>Production</td>
+                            <td>Main Inventory</td>
+                            <td>Sealed Cup</td>
+                            
+                            <td><a href="/view-job-order">JO-00007</a></td>
+                            <td><a href="#">Print</a></td>
+                            
+                        </tr> 
                 </tbody>
                 
             </table>

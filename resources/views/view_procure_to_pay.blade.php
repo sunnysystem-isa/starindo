@@ -58,11 +58,11 @@
                         <a href="#" data-bs-toggle="dropdown" role="button"
                             class="stage-button d-flex align-items-center stage-is-done color-is-default"
                             style="outline: 0px; cursor: pointer; ">
-                            <span>Complete</span>
+                            <span>Delivered</span>
                             <i class="bi bi-caret-down-fill text-white ms-3"></i>
                         </a>
                         <ul class="dropdown-menu" id="cancel" aria-labelledby="cancel">
-                            <li><a class="dropdown-item" href="#">Complete</a></li>
+                            <li><a class="dropdown-item" href="#">Delivered</a></li>
                             <li><a class="dropdown-item" href="#">Cancel</a></li>
                         </ul>
                     </div>
@@ -304,14 +304,15 @@
                                                             <td><select name="type" id="code-item"
                                                                     onchange="read(this)" class="form-select"
                                                                     data-hide-search="true" data-placeholder="Select Type"
-                                                                    value="FG-001">
-                                                                    <option value="FG-001">FG-001</option>
+                                                                    value="RAW-001">
+                                                                    
                                                                     <option value="RAW-001">RAW-001</option>
+                                                                    <option value="FG-001">FG-001</option>
                                                                 </select>
                                                             </td>
 
                                                             <td><input type="text" id="nama-item" name="nama-item"
-                                                                    class="form-control" value="Finish Goods Polybag">
+                                                                    class="form-control" value="PLASTIC">
                                                             </td>
 
                                                             <td><input id="quantity" oninput="rumus(this)"
@@ -321,11 +322,11 @@
 
                                                             <td><input id="price"
                                                                     type="number" name="" class="form-control"
-                                                                    value="25000000">
+                                                                    value="5000">
                                                             </td>
                                                             
                                                             <td><input id="tax"
-                                                                    type="number" name="" class="form-control"
+                                                                    type="text" name="" class="form-control"
                                                                     value="11%">
                                                             </td>
 
@@ -431,6 +432,7 @@
 
                                                     <button type="button" class="btn btn-sm btn-secondary"
                                                         onclick="myFunction()">Add +</button>
+                                                    
 
                                                     <script>
                                                         function myFunction() {
@@ -504,6 +506,20 @@
                                                     </script>
 
                                                 </table>
+                                                <!--begin::Input group Website-->
+                                                <div class="fv-row mb-6">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-bold form-label mt-3">
+                                                    <span>Total<i class="bi bi-lock-fill"></i></span>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control form-control-solid"
+                                                    id="customer-number" name="customer-number" value="2.775.000"
+                                                    placeholder="" readonly />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
                                             </div>
                                             <!--End::Row-->
                                         </div>
