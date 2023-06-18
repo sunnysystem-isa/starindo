@@ -129,6 +129,81 @@
                 <!--end:Menu item-->
                 <!--begin:Menu item-->
                 <div class="menu-item">
+                    <a class="menu-link" {!! str_contains(Request::Path(), 'promised-delivery') ? $activePage : '' !!}  href="/head-promised-delivery">
+                        <span class="me-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3" d="M3 3V17H7V21H15V9H20V3H3Z" fill="white"/>
+                                <path d="M20 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V21C21 21.6 20.6 22 20 22ZM19 4H4V8H19V4ZM6 18H4V20H6V18ZM6 14H4V16H6V14ZM6 10H4V12H6V10ZM10 18H8V20H10V18ZM10 14H8V16H10V14ZM10 10H8V12H10V10ZM14 18H12V20H14V18ZM14 14H12V16H14V14ZM14 10H12V12H14V10ZM19 14H17V20H19V14ZM19 10H17V12H19V10Z" fill="white"/>
+                            </svg>
+                        </span>
+                        <span style="font-size: 16px" class="menu-title text-white">Delivery to Promise </span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <a class="menu-link" data-bs-toggle="collapse" href="#bom" role="button" aria-expanded="false" aria-controls="collapse-side">
+                        <span class="menu-icon">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                            <span class="svg-icon-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M20.0381 4V10C20.0381 10.6 19.6381 11 19.0381 11H17.0381C16.4381 11 16.0381 10.6 16.0381 10V4C16.0381 2.9 16.9381 2 18.0381 2C19.1381 2 20.0381 2.9 20.0381 4ZM9.73808 18.9C10.7381 18.5 11.2381 17.3 10.8381 16.3L5.83808 3.29999C5.43808 2.29999 4.23808 1.80001 3.23808 2.20001C2.23808 2.60001 1.73809 3.79999 2.13809 4.79999L7.13809 17.8C7.43809 18.6 8.23808 19.1 9.03808 19.1C9.23808 19 9.53808 19 9.73808 18.9ZM19.0381 18H17.0381V20H19.0381V18Z" fill="white"/>
+                                    <path d="M18.0381 6H4.03809C2.93809 6 2.03809 5.1 2.03809 4C2.03809 2.9 2.93809 2 4.03809 2H18.0381C19.1381 2 20.0381 2.9 20.0381 4C20.0381 5.1 19.1381 6 18.0381 6ZM4.03809 3C3.43809 3 3.03809 3.4 3.03809 4C3.03809 4.6 3.43809 5 4.03809 5C4.63809 5 5.03809 4.6 5.03809 4C5.03809 3.4 4.63809 3 4.03809 3ZM18.0381 3C17.4381 3 17.0381 3.4 17.0381 4C17.0381 4.6 17.4381 5 18.0381 5C18.6381 5 19.0381 4.6 19.0381 4C19.0381 3.4 18.6381 3 18.0381 3ZM12.0381 17V22H6.03809V17C6.03809 15.3 7.33809 14 9.03809 14C10.7381 14 12.0381 15.3 12.0381 17ZM9.03809 15.5C8.23809 15.5 7.53809 16.2 7.53809 17C7.53809 17.8 8.23809 18.5 9.03809 18.5C9.83809 18.5 10.5381 17.8 10.5381 17C10.5381 16.2 9.83809 15.5 9.03809 15.5ZM15.0381 15H17.0381V13H16.0381V8L14.0381 10V14C14.0381 14.6 14.4381 15 15.0381 15ZM19.0381 15H21.0381C21.6381 15 22.0381 14.6 22.0381 14V10L20.0381 8V13H19.0381V15ZM21.0381 20H15.0381V22H21.0381V20Z" fill="white"/>
+                                    </svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                        </span>
+                        <span class="menu-title text-white">BOM</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu Collapse-->
+                <div class="collapse" id="bom">
+                    <!--begin:Item Collapse-->
+                    <div class="menu-item" {!! str_contains(Request::Path(), 'bom-design') ? $activePage : '' !!}>
+                        <a class="menu-link" href="/bom-design">
+                            <span class="menu-link">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot text-warning"></span>
+                                </span>
+                                <span class="menu-title {!! str_contains(Request::Path(), 'bom-design') ? 'text-white' : '' !!}">BOM Design</span>
+                                <span class="menu-arrow "></span>
+                            </span>
+                        </a>
+                    </div>
+                    <!--end:Item Collapse-->
+                    <!--begin:Item Collapse-->
+                    <div class="menu-item" {!! str_contains(Request::Path(), 'view-design') ? $activePage : '' !!}>
+                        <a class="menu-link" href="/calculate-bom">
+                            <span class="menu-link">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot text-warning"></span>
+                                </span>
+                                <span class="menu-title {!! str_contains(Request::Path(), 'view-design') ? 'text-white' : '' !!}">BOM Calculate</span>
+                                <span class="menu-arrow "></span>
+                            </span>
+                        </a>
+                    </div>
+                    <!--end:Item Collapse-->
+                </div>
+                <!--end:Menu Collapse-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <a class="menu-link" {!! str_contains(Request::Path(), 'procure-to-pay') ? $activePage : '' !!}  href="/procure-to-pay">
+                        <span class="me-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3" d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z" fill="white"/>
+                                <path opacity="0.3" d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z" fill="white"/>
+                                <path opacity="0.3" d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z" fill="white"/>
+                                <path d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z" fill="white"/>
+                                </svg>
+                        </span>
+                        <span style="font-size: 16px" class="menu-title text-white">Procure to Pay</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
                 <a class="menu-link" {!! str_contains(Request::Path(), 'goods-receipt') ? $activePage : '' !!}  href="/goods-receipt">
                     <span class="me-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,34 +215,7 @@
                 </a>
             </div>
             <!--end:Menu item-->
-            <!--begin:Menu item-->
-            <div class="menu-item">
-                <a class="menu-link" {!! str_contains(Request::Path(), 'procure-to-pay') ? $activePage : '' !!}  href="/procure-to-pay">
-                    <span class="me-3">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.3" d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z" fill="white"/>
-                            <path opacity="0.3" d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z" fill="white"/>
-                            <path opacity="0.3" d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z" fill="white"/>
-                            <path d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z" fill="white"/>
-                            </svg>
-                    </span>
-                    <span style="font-size: 16px" class="menu-title text-white">Procure to Pay</span>
-                </a>
-            </div>
-            <!--end:Menu item-->
-            <!--begin:Menu item-->
-            <div class="menu-item">
-                <a class="menu-link" {!! str_contains(Request::Path(), 'promised-delivery') ? $activePage : '' !!}  href="/head-promised-delivery">
-                    <span class="me-3">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.3" d="M3 3V17H7V21H15V9H20V3H3Z" fill="white"/>
-                            <path d="M20 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V21C21 21.6 20.6 22 20 22ZM19 4H4V8H19V4ZM6 18H4V20H6V18ZM6 14H4V16H6V14ZM6 10H4V12H6V10ZM10 18H8V20H10V18ZM10 14H8V16H10V14ZM10 10H8V12H10V10ZM14 18H12V20H14V18ZM14 14H12V16H14V14ZM14 10H12V12H14V10ZM19 14H17V20H19V14ZM19 10H17V12H19V10Z" fill="white"/>
-                        </svg>
-                    </span>
-                    <span style="font-size: 16px" class="menu-title text-white">Delivery to Promise </span>
-                </a>
-            </div>
-            <!--end:Menu item-->
+            
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     @if (!auth()->user()->Role->is_user)
@@ -255,53 +303,7 @@
                     <!--end:Item Collapse-->
                 </div>
                 <!--end:Menu Collapse-->
-                <!--begin:Menu item-->
-                <div class="menu-item">
-                    <a class="menu-link" data-bs-toggle="collapse" href="#bom" role="button" aria-expanded="false" aria-controls="collapse-side">
-                        <span class="menu-icon">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-                            <span class="svg-icon-2">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.3" d="M20.0381 4V10C20.0381 10.6 19.6381 11 19.0381 11H17.0381C16.4381 11 16.0381 10.6 16.0381 10V4C16.0381 2.9 16.9381 2 18.0381 2C19.1381 2 20.0381 2.9 20.0381 4ZM9.73808 18.9C10.7381 18.5 11.2381 17.3 10.8381 16.3L5.83808 3.29999C5.43808 2.29999 4.23808 1.80001 3.23808 2.20001C2.23808 2.60001 1.73809 3.79999 2.13809 4.79999L7.13809 17.8C7.43809 18.6 8.23808 19.1 9.03808 19.1C9.23808 19 9.53808 19 9.73808 18.9ZM19.0381 18H17.0381V20H19.0381V18Z" fill="white"/>
-                                    <path d="M18.0381 6H4.03809C2.93809 6 2.03809 5.1 2.03809 4C2.03809 2.9 2.93809 2 4.03809 2H18.0381C19.1381 2 20.0381 2.9 20.0381 4C20.0381 5.1 19.1381 6 18.0381 6ZM4.03809 3C3.43809 3 3.03809 3.4 3.03809 4C3.03809 4.6 3.43809 5 4.03809 5C4.63809 5 5.03809 4.6 5.03809 4C5.03809 3.4 4.63809 3 4.03809 3ZM18.0381 3C17.4381 3 17.0381 3.4 17.0381 4C17.0381 4.6 17.4381 5 18.0381 5C18.6381 5 19.0381 4.6 19.0381 4C19.0381 3.4 18.6381 3 18.0381 3ZM12.0381 17V22H6.03809V17C6.03809 15.3 7.33809 14 9.03809 14C10.7381 14 12.0381 15.3 12.0381 17ZM9.03809 15.5C8.23809 15.5 7.53809 16.2 7.53809 17C7.53809 17.8 8.23809 18.5 9.03809 18.5C9.83809 18.5 10.5381 17.8 10.5381 17C10.5381 16.2 9.83809 15.5 9.03809 15.5ZM15.0381 15H17.0381V13H16.0381V8L14.0381 10V14C14.0381 14.6 14.4381 15 15.0381 15ZM19.0381 15H21.0381C21.6381 15 22.0381 14.6 22.0381 14V10L20.0381 8V13H19.0381V15ZM21.0381 20H15.0381V22H21.0381V20Z" fill="white"/>
-                                    </svg>
-                            </span>
-                            <!--end::Svg Icon-->
-                        </span>
-                        <span class="menu-title text-white">BOM</span>
-                    </a>
-                </div>
-                <!--end:Menu item-->
-                <!--begin:Menu Collapse-->
-                <div class="collapse" id="bom">
-                    <!--begin:Item Collapse-->
-                    <div class="menu-item" {!! str_contains(Request::Path(), 'bom-design') ? $activePage : '' !!}>
-                        <a class="menu-link" href="/bom-design">
-                            <span class="menu-link">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot text-warning"></span>
-                                </span>
-                                <span class="menu-title {!! str_contains(Request::Path(), 'bom-design') ? 'text-white' : '' !!}">BOM Design</span>
-                                <span class="menu-arrow "></span>
-                            </span>
-                        </a>
-                    </div>
-                    <!--end:Item Collapse-->
-                    <!--begin:Item Collapse-->
-                    <div class="menu-item" {!! str_contains(Request::Path(), 'view-design') ? $activePage : '' !!}>
-                        <a class="menu-link" href="/calculate-bom">
-                            <span class="menu-link">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot text-warning"></span>
-                                </span>
-                                <span class="menu-title {!! str_contains(Request::Path(), 'view-design') ? 'text-white' : '' !!}">BOM Calculate</span>
-                                <span class="menu-arrow "></span>
-                            </span>
-                        </a>
-                    </div>
-                    <!--end:Item Collapse-->
-                </div>
-                <!--end:Menu Collapse-->
+                
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
