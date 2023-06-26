@@ -165,7 +165,7 @@
                         <th>Order Qty</th>
                         <th>PIC Name</th>
                         <th>Status</th>
-                        <th>Print</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -180,7 +180,7 @@
                             <td>100000</td>
                             <td>Admin</td>
                             <td>In progess</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr> 
                         
@@ -192,7 +192,7 @@
                             <td>7000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -204,7 +204,7 @@
                             <td>3000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -216,7 +216,7 @@
                             <td>23000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -228,7 +228,7 @@
                             <td>2000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -240,7 +240,7 @@
                             <td>6700</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -252,7 +252,7 @@
                             <td>60000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
 
@@ -264,7 +264,7 @@
                             <td>10000</td>
                             <td>Admin</td>
                             <td>Complete</td>
-                            <td><a href="/download?JO">Print</a></td>
+                            <td><a href="/download/JO">Print</a></td>
                             
                         </tr>
                 </tbody>

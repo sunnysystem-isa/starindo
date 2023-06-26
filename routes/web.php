@@ -345,13 +345,40 @@ Route::group(['middleware' => ["auth"]], function () {
         return view('promised_delivery', compact(['data']));
     });
 
-    Route::get('/download', function () {
+    Route::get('/download/PTP', function () {
+        $file = public_path()."\assets\document\Template_Download_JO.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Procure To Pay.pdf", $headers);
+    });
+    
+    Route::get('/download/JO', function () {
         $file = public_path()."\assets\document\Template_Download_JO.pdf";
         $headers = array(
             'Content-Type' => 'application/pdf'
         );
         // dd($file);
         return response()->download($file, "Document Job Order.pdf", $headers);
+    });
+    
+    Route::get('/download/DTP', function () {
+        $file = public_path()."\assets\document\Template_Download_GR.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Delivery To Promise.pdf", $headers);
+    });
+    
+    Route::get('/download/GR', function () {
+        $file = public_path()."\assets\document\Template_Download_GR.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Good Receipt.pdf", $headers);
     });
     
     

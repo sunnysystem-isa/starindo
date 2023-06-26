@@ -165,7 +165,7 @@
                         <th>Location Out</th>
                         <th>Payment Terms</th>
                         <th>Created Date</th>
-                        <th>Attachment</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -180,7 +180,7 @@
                             <td>Main Warehouse</td>
                             <td>5</td>
                             <td>16 Juni 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr>
                         
                         <tr>
@@ -191,7 +191,7 @@
                             <td>Production</td>
                             <td>3</td>
                             <td>16 Juni 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -202,7 +202,7 @@
                             <td>Production</td>
                             <td>1</td>
                             <td>22 Mei 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -213,7 +213,7 @@
                             <td>Main Warehouse</td>
                             <td>2</td>
                             <td>11 Mei 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -224,7 +224,7 @@
                             <td>Main Warehouse</td>
                             <td>4</td>
                             <td>28 April 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -235,7 +235,7 @@
                             <td>Production</td>
                             <td>5</td>
                             <td>8 April 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -246,7 +246,7 @@
                             <td>Main Warehouse</td>
                             <td>2</td>
                             <td>2 April 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
 
                         <tr>
@@ -257,7 +257,7 @@
                             <td>Main Warehouse</td>
                             <td>2</td>
                             <td>20 Maret 2023</td>
-                            <td><a href="#">Detail</a></td>
+                            <td><a href="/download/PTP">Print</a></td>
                         </tr> 
                 </tbody>
                 
