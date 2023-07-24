@@ -164,6 +164,7 @@
                         <th>Item Name</th>
                         <th>Order Qty</th>
                         <th>PIC Name</th>
+                        <th>Delivery Date</th>
                         <th>Status</th>
                         <th>Print</th>
                     </tr>
@@ -179,8 +180,9 @@
                             <td>Finish Goods Polybag</td>
                             <td>100000</td>
                             <td>Admin</td>
+                            <td>12/06/2023</td>
                             <td>In progess</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr>
                         
@@ -191,6 +193,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>7000</td>
                             <td>Admin</td>
+                            <td>27/05/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -203,6 +206,7 @@
                             <td>Sealed Cup</td>
                             <td>3000</td>
                             <td>Admin</td>
+                            <td>19/05/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -215,6 +219,7 @@
                             <td>Sealed Cup</td>
                             <td>23000</td>
                             <td>Admin</td>
+                            <td>10/05/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -227,6 +232,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>2000</td>
                             <td>Admin</td>
+                            <td>25/04/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -239,6 +245,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>6700</td>
                             <td>Admin</td>
+                            <td>19/04/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -251,6 +258,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>6700</td>
                             <td>Admin</td>
+                            <td>01/04/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             
@@ -263,6 +271,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>10000</td>
                             <td>Admin</td>
+                            <td>24/04/2023</td>
                             <td>Complete</td>
                             <td><a href="#">Print</a></td>
                             

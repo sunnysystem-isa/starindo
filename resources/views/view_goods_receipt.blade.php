@@ -96,7 +96,7 @@
                                         <div class="fv-row mb-7">
                                             <!--begin::Label-->
                                             <label class="fs-6 fw-bold form-label mt-3 required">
-                                                <span>Date</span>
+                                                <span>Start Date</span>
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
@@ -109,6 +109,23 @@
                                         </div>
                                         <!--end::Input group-->
                                         
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>Finish Date</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                            value="2023-06-26" placeholder="Date" />
+                                            @error('no-job-order')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+
                                         <!--begin::Input group Website-->
                                         <div class="fv-row mb-7">
                                             <!--begin::Label-->
@@ -211,6 +228,13 @@
                                 </li>
                                 <!--end:::Tab item Informasi Perusahaan-->
 
+                                <!--begin:::Tab Notes-->
+                                <li class="nav-item">
+                                            <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_notes"
+                                                style="font-size:12px;">ATTACHMENT & NOTES</a>
+                                    </li>
+                                    <!--end:::Tab Notes-->
+
 
                                 {{-- <!--begin:::Tab item History-->
                                 <!-- <li class="nav-item">
@@ -231,7 +255,49 @@
                             
                             <!--Begin::Tab Panel-->
                             <div class="tab-content">
-                                <!--Begin::Tab Overview-->
+                                
+                            <!--Begin::Tab Notes-->
+                            <div class="tab-pane fade" id="kt_notes" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                                            <div class="row mb-3">
+                                            <h3>Attachment</h3>
+                                            </div>
+                                            <input type="file" class="form-control form-control-solid"
+                                            id="customer-number" name="customer-number" />
+                                            <br>
+                                            <div class="ms-3">
+                                                            <table class="table align-middle table-row-dashed fs-6" id="kt_customers_table">
+                                                                <!--begin::Table head-->
+                                                                <thead>
+                                                                    <!--begin::Table row-->
+                                                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
+                                                                        <th class="min-w-auto">Attachment Name</th>
+                                                                        <th class="min-w-auto">Modified On</th>
+                                                                        <th class="min-w-auto">Modified By</th>
+                                                                        <th class="w-100px"></th>
+                                                                    </tr>
+                                                                    <!--end::Table row-->
+                                                                </thead>
+                                                                <!--end::Table head-->
+                                                                <!--begin::Table body-->
+                                                                <tbody class="fw-bold text-gray-600">
+                                                                                                                                                                                                                
+                                                                </tbody>
+                                                                <!--end::Table body-->
+                                                            </table>
+                                                        </div>
+                                                        <br>
+                                            <hr>
+                                            <div class="row mb-3">
+                                            <h3>Notes</h3>
+                                            </div>
+                                            <div class="form-group">
+                                             <textarea class="form-control form-control-text" name="note-attachment" style="min-height: 300px; height: 68px;"></textarea>
+                                            </div>
+                                    
+                                </div>
+                                <!--End::Tab Notes-->
+                            
+                            <!--Begin::Tab Overview-->
                                 <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                     <div class="container">
                                         <div class="row fv-row">
@@ -380,19 +446,7 @@
                                             <div class="container">
                                                 <!--Begin::Row-->
                                                 <div class="row fv-row mb-7">
-                                                    <!-- <div class="col-6">
-                                                        <label class="fs-6 fw-bold form-label mt-3">Title</label>
-                                                        <div id="title">
-                                                            <select name="title" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select Title">
-                                                                <option value=""></option>
-                                                                    <option value="#N/A">#N/A</option>
-                                                                    <option value="Bapak">Bapak</option>
-                                                                    <option value="Ibu">Ibu</option>
-                                                                    <option value="Miss.">Mrs.</option>
-                                                                    <option value="Mr.">Mr.</option>
-                                                            </select>
-                                                        </div>
-                                                    </div> -->
+                                                    
                                                     <div class="col-6">
                                                         <label class="fs-6 fw-bold form-label mt-3">Job Order</label>
                                                         <select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">

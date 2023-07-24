@@ -27,10 +27,10 @@
                             <!--begin::Title-->
                             <div class="card-title d-flex flex-column">
                                 <!--begin::Amount-->
-                                <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">69</span>
+                                <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">29</span>
                                 <!--end::Amount-->
                                 <!--begin::Subtitle-->
-                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Active Projects</span>
+                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Delivery to promise In Progress</span>
                                 <!--end::Subtitle-->
                             </div>
                             <!--end::Title-->
@@ -70,7 +70,7 @@
                                 <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">35</span>
                                 <!--end::Amount-->
                                 <!--begin::Subtitle-->
-                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Active Projects</span>
+                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Delivery to promise Complete</span>
                                 <!--end::Subtitle-->
                             </div>
                             <!--end::Title-->
@@ -107,10 +107,10 @@
                             <!--begin::Title-->
                             <div class="card-title d-flex flex-column">
                                 <!--begin::Amount-->
-                                <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">80</span>
+                                <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">64</span>
                                 <!--end::Amount-->
                                 <!--begin::Subtitle-->
-                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Active Projects</span>
+                                <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Total Delivery to Promise</span>
                                 <!--end::Subtitle-->
                             </div>
                             <!--end::Title-->
@@ -121,11 +121,11 @@
                             <!--begin::Progress-->
                             <div class="d-flex align-items-center flex-column mt-3 w-100">
                                 <div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
-                                    <span>12 Pending</span>
-                                    <span>80%</span>
+                                    <br>
+                                    
                                 </div>
                                 <div class="h-8px mx-3 w-100 bg-white bg-opacity-50 rounded">
-                                    <div class="bg-white rounded h-8px" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="bg-white rounded h-8px" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <!--end::Progress-->
@@ -147,7 +147,7 @@
                 <!--begin::Card body-->
                 <div class="card-body pt-0">
                     <!--begin::COLUMN CHART-->
-                    <div id="column-chart"></div>
+                    <div id="pie-chart"></div>
                     <!-- data table is inserted here -->
                     <!--end::COLUMN CHART-->
                 </div>
@@ -173,29 +173,18 @@
         <!--begin::Card Diagram Pie dan Stack-->
         <div class="row mx-3">
             <!--begin::Card column-->
-            <div class="col-6">
+            <div class="col">
                 <!--begin::Card body-->
                 <div class="card-body pt-0">
                     <!--begin::PIE CHART-->
-                    <div id="pie-chart"></div>
+                    <div id="column-chart"></div>
                     <!-- data table is inserted here -->
                     <!--end::PIE CHART-->
                 </div>
                 <!--end::Card body-->
             </div>
             <!--end-begin::Card column-->
-            <div class="col-6">
-                <!--begin::Card body-->
-                <div class="card-body pt-0">
-                    <!--begin::STack CHART-->
-                    <figure class="highcharts-figure">
-                        <div id="stack-chart"></div>
-                        <!-- data table is inserted here -->
-                    </figure>
-                    <!--end::STack CHART-->
-                </div>
-                <!--end::Card body-->
-            </div>
+            
             <!--end::Card column-->
         </div>
         <!--end::Card Diagram Pie dan Stack-->
@@ -231,8 +220,8 @@
                     <div class="card-header pt-7">
                         <!--begin::Title-->
                         <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label fw-bold text-gray-800">My Sales in Details</span>
-                            <span class="text-gray-400 mt-1 fw-semibold fs-6">Avg. 57 orders per day</span>
+                            <span class="card-label fw-bold text-gray-800">Delivery to Promise in Details</span>
+                            <!-- <span class="text-gray-400 mt-1 fw-semibold fs-6">Avg. 57 orders per day</span> -->
                         </h3>
                         <!--end::Title-->
                         <!--begin::Actions-->
@@ -263,10 +252,10 @@
                                     <select class="form-select form-select-transparent text-dark fs-7 lh-1 fw-bold py-0 ps-3 w-auto" data-control="select2" data-hide-search="true" data-dropdown-css-class="w-150px" data-placeholder="Select an option" data-kt-table-widget-4="filter_status">
                                         <option></option>
                                         <option value="Show All" selected="selected">Show All</option>
-                                        <option value="Shipped">Shipped</option>
-                                        <option value="Confirmed">Confirmed</option>
-                                        <option value="Rejected">Rejected</option>
-                                        <option value="Pending">Pending</option>
+                                        <option value="Cancel">Cancel</option>
+                                        <option value="Confirmed">Complete</option>
+                                        <option value="Rejected">In Progress</option>
+                                        <option value="Pending">New</option>
                                     </select>
                                     <!--end::Select-->
                                 </div>
@@ -298,11 +287,10 @@
                             <thead>
                                 <!--begin::Table row-->
                                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                    <th class="min-w-100px">Order ID</th>
-                                    <th class="text-end min-w-100px">Created</th>
+                                    <th class="min-w-100px">No. Delivery To Promise</th>                                    
                                     <th class="text-end min-w-125px">Customer</th>
-                                    <th class="text-end min-w-100px">Total</th>
-                                    <th class="text-end min-w-100px">Profit</th>
+                                    <th class="text-end min-w-100px">Item Name</th>
+                                    <th class="text-end min-w-100px">Order Qty</th>                                    
                                     <th class="text-end min-w-50px">Status</th>
                                     <th class="text-end"></th>
                                 </tr>
@@ -338,253 +326,127 @@
                                     <td class="text-end">
                                         <div class="text-gray-800 fs-7 me-3">On hand</div>
                                         <div class="text-muted fs-7 fw-bold" data-kt-table-widget-4="template_stock">32</div>
-                                    </td>
-                                    <td></td>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#XGY-346</a>
-                                    </td>
-                                    <td class="text-end">7 min ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Albert Flores</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Ferbyansah</a>
                                     </td>
-                                    <td class="text-end">630.00</td>
+                                    <td class="text-end">Finish Goods Polybag</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">86.70</span>
+                                        <span class="text-gray-800 fw-bolder">100000</span>
                                     </td>
                                     <td class="text-end">
                                         <span class="badge py-3 px-4 fs-7 badge-light-warning">Pending</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#YHD-047</a>
-                                    </td>
-                                    <td class="text-end">52 min ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Jenny Wilson</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Alexander</a>
                                     </td>
-                                    <td class="text-end">25.00</td>
+                                    <td class="text-end">Finish Goods Polybag</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">4.20</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-primary">Confirmed</span>
+                                        <span class="text-gray-800 fw-bolder">7000</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#SRR-678</a>
-                                    </td>
-                                    <td class="text-end">1 hour ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Robert Fox</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Baker</a>
                                     </td>
-                                    <td class="text-end">1,630.00</td>
+                                    <td class="text-end">Sealed Cup</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">203.90</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-warning">Pending</span>
+                                        <span class="text-gray-800 fw-bolder">3000</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#PXF-534</a>
-                                    </td>
-                                    <td class="text-end">3 hour ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Cody Fisher</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Ferbyansah</a>
                                     </td>
-                                    <td class="text-end">119.00</td>
+                                    <td class="text-end">Sealed Cup</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">12.00</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Shipped</span>
+                                        <span class="text-gray-800 fw-bolder">23000</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#XGD-249</a>
-                                    </td>
-                                    <td class="text-end">2 day ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Arlene McCoy</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Alexander</a>
                                     </td>
-                                    <td class="text-end">660.00</td>
+                                    <td class="text-end">Finish Goods Polybag</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">52.26</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Shipped</span>
+                                        <span class="text-gray-800 fw-bolder">2000</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#SKP-035</a>
-                                    </td>
-                                    <td class="text-end">2 day ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Eleanor Pena</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Baker</a>
                                     </td>
-                                    <td class="text-end">290.00</td>
+                                    <td class="text-end">Finish Goods Polybag</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">29.00</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-danger">Rejected</span>
+                                        <span class="text-gray-800 fw-bolder">6700</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
-                                    </td>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#SKP-567</a>
-                                    </td>
-                                    <td class="text-end">7 min ago</td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
                                     <td class="text-end">
-                                        <a href="#" class="text-gray-600 text-hover-primary">Dan Wilson</a>
+                                        <a href="#" class="text-gray-600 text-hover-primary">Ahmad</a>
                                     </td>
-                                    <td class="text-end">590.00</td>
+                                    <td class="text-end">Finish Goods Polybag</td>
                                     <td class="text-end">
-                                        <span class="text-gray-800 fw-bolder">50.00</span>
-                                    </td>
-                                    <td class="text-end">
-                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Shipped</span>
+                                        <span class="text-gray-800 fw-bolder">6700</span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px" data-kt-table-widget-4="expand_row">
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-off">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr089.svg-->
-                                            <span class="svg-icon svg-icon-3 m-0 toggle-on">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon-->
-                                        </button>
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/../demo1/apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">DP-00001</a>
+                                    </td>                                    
+                                    <td class="text-end">
+                                        <a href="#" class="text-gray-600 text-hover-primary">Alexander</a>
                                     </td>
+                                    <td class="text-end">Finish Goods Polybag</td>
+                                    <td class="text-end">
+                                        <span class="text-gray-800 fw-bolder">10000</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="badge py-3 px-4 fs-7 badge-light-success">Complete</span>
+                                    </td>                                    
                                 </tr>
                             </tbody>
                             <!--end::Table body-->
@@ -612,7 +474,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Sunny Column Chart',
+                text: 'Job Order',
                 style: {
                     fontWeight: 'bold',
                     fontSize: '25px'
@@ -672,11 +534,11 @@
                 allowHTML: true
             },
             series: [{
-                name: 'Input',
+                name: 'Complete',
                 data: [11.5, 13.9, 12.6, 14]
 
             }, {
-                name: 'Output',
+                name: 'Cancel',
                 data: [5.8, 8.3, 6.32, 9.3]
 
             }]
@@ -695,7 +557,7 @@
                 }
             },
             title: {
-                text: 'Sunny Donut Chart',
+                text: 'Delivery to Promise by Product',
                 style: {
                     fontWeight: 'bold',
                     fontSize: '25px'
@@ -741,10 +603,8 @@
             series: [{
                 name: 'Medals',
                 data: [
-                    ['2019', 8],
-                    ['2020', 16],
-                    ['2021', 12],
-                    ['2022', 8],
+                    ['Polybag', 18],
+                    ['Sealed Cup', 26],                    
                     ['Others', 4]
                 ]
             }]
@@ -763,7 +623,7 @@
                 }
             },
             title: {
-                text: 'Sunny Pie Chart',
+                text: 'Stock Out Material (Month)',
                 style: {
                     fontWeight: 'bold',
                     fontSize: '25px'
@@ -809,11 +669,10 @@
             series: [{
                 name: 'Medals',
                 data: [
-                    ['2019', 9],
-                    ['2020', 11],
-                    ['2021', 13],
-                    ['2022', 16],
-                    ['Others', 5]
+                    ['Jerami', 1600],
+                    ['Serabut', 2230],
+                    ['Plastic', 2400]
+                    
                 ]
             }]
         });
@@ -906,7 +765,7 @@
     <script>
         Highcharts.chart('chart-line', {
             title: {
-                text: 'Sunny Line Chart',
+                text: 'Polybag Job Order(Qty)',
                 style: {
                     fontWeight: 'bold',
                     fontSize: '25px'

@@ -345,13 +345,61 @@ Route::group(['middleware' => ["auth"]], function () {
         return view('promised_delivery', compact(['data']));
     });
 
-    Route::get('/download', function () {
-        $file = public_path()."\assets\document\Template_Download_JO.pdf";
+    Route::get('/production', function () {
+        return view('production');
+    });
+
+    Route::get('/view-production', function () {
+        return view('view_production');
+    });
+
+    Route::get('/view-invoice', function () {
+        return view('view_invoice');
+    });
+
+    Route::get('/download/JO', function () {
+        $file = public_path()."/assets/document/Template_Download_JO.pdf";
         $headers = array(
             'Content-Type' => 'application/pdf'
         );
         // dd($file);
         return response()->download($file, "Document Job Order.pdf", $headers);
+    });
+    
+    Route::get('/download/DTP', function () {
+        $file = public_path()."/assets/document/Template_Download_DTP.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Delivery to Promise.pdf", $headers);
+    });
+    
+    Route::get('/download/GR', function () {
+        $file = public_path()."/assets/document/Template_Download_GR.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Document Goods Receipt.pdf", $headers);
+    });
+    
+    // Route::get('/download/PTP', function () {
+    //     $file = public_path()."/assets/document/Template_Download_GR.pdf";
+    //     $headers = array(
+    //         'Content-Type' => 'application/pdf'
+    //     );
+    //     // dd($file);
+    //     return response()->download($file, "Document Goods Receipt.pdf", $headers);
+    // });
+    
+    Route::get('/download/Invoice', function () {
+        $file = public_path()."/assets/document/Template_Download_Invoice.pdf";
+        $headers = array(
+            'Content-Type' => 'application/pdf'
+        );
+        // dd($file);
+        return response()->download($file, "Invoice.pdf", $headers);
     });
     
     

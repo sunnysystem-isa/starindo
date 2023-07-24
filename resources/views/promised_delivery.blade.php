@@ -40,7 +40,7 @@
         </div>
         <!--end::Toolbar-->
 
-        <div class="col-xl-15 mb-8 mx-6">
+        <!-- <div class="col-xl-15 mb-8 mx-6">
             <div class="card card-flush h-lg-100" id="kt_contacts_main">
                 <div class="card-body pt-auto" style="background-color:#f1f1f1; border:1px solid #e6e6e6;">
                     <div id="stage-button" class="stage-list">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--begin::Post-->
         <div class="card mx-6" Id="List-vv" style="position: relative; overflow: hidden;">
@@ -81,26 +81,97 @@
             <div class="card-body pt-6">
                 <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
                     <li class="nav-item">
-                        <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_finish_goods" style="font-size:12px;">Promised</a>
+                        <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_finish_goods" style="font-size:12px;">PROMISE</a>
                     </li>
+                    <!--begin:::Tab Notes-->
+                    <li class="nav-item">
+                        <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_notes"
+                        style="font-size:12px;">ATTACHMENT & NOTES</a>
+                    </li>
+                    <!--end:::Tab Notes-->
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="kt_finish_goods" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                    
+                <!--Begin::Tab Notes-->
+                <div class="tab-pane fade" id="kt_notes" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                                            <div class="row mb-3">
+                                            <h3>Attachment</h3>
+                                            </div>
+                                            <input type="file" class="form-control form-control-solid"
+                                            id="customer-number" name="customer-number" />
+                                            <br>
+                                            <div class="ms-3">
+                                                            <table class="table align-middle table-row-dashed fs-6" id="kt_customers_table">
+                                                                <!--begin::Table head-->
+                                                                <thead>
+                                                                    <!--begin::Table row-->
+                                                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
+                                                                        <th class="min-w-auto">Attachment Name</th>
+                                                                        <th class="min-w-auto">Modified On</th>
+                                                                        <th class="min-w-auto">Modified By</th>
+                                                                        <th class="w-100px"></th>
+                                                                    </tr>
+                                                                    <!--end::Table row-->
+                                                                </thead>
+                                                                <!--end::Table head-->
+                                                                <!--begin::Table body-->
+                                                                <tbody class="fw-bold text-gray-600">
+                                                                                                                                                                                                                
+                                                                </tbody>
+                                                                <!--end::Table body-->
+                                                            </table>
+                                                        </div>
+                                                        <br>
+                                            <hr>
+                                            <div class="row mb-3">
+                                            <h3>Notes</h3>
+                                            </div>
+                                            <div class="form-group">
+                                             <textarea class="form-control form-control-text" name="note-attachment" style="min-height: 300px; height: 68px;"></textarea>
+                                            </div>
+                                    
+                                </div>
+                                <!--End::Tab Notes-->
+                
+                <div class="tab-pane fade show active" id="kt_finish_goods" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
                         <div class="container">
                             <div class="row fv-row">
                                 <div class="row mb-7">
                                     <h3>Calculate Product</h3>
                                 </div>
                                 <div class="row">                                    
-                                <div class="col-6 mb-3">
+                                    <div class="col-6 mb-3">
                                         <label for="" class="mb-3 required">Customer</label>
                                         <select name="type" id="code-item" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type" value="FG-001">
                                         <option value="Ferbyansah">Ferbyansah</option>
                                         </select>
-                                    </div>
-                                    
+                                    </div>                                                               
                                 </div>
+
+                                <div class="row">                                    
+                                    <div class="col-6 mb-3">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>Start Date</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                            value="2023-06-16" placeholder="Date" />                                                                                     
+                                    </div>    
+                                    <div class="col-6 mb-3">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>End Date</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                            value="" placeholder="Date" />                                                                                     
+                                    </div>    
+                                </div>
+                                
                                 <div class="row">                                    
                                     <div class="col-6 mb-3">
                                         <label for="" class="mb-3 required">Product</label>
@@ -119,6 +190,7 @@
                                     </div>
                                     <button type="button" class="btn btn-sm btn-success">Calculate</button>
                                 </div>
+                                
                                 <div class="row mb-3 mt-7">
                                     <h3>Result</h3>
                                 </div>

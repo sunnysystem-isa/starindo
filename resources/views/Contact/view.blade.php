@@ -156,7 +156,7 @@
                                 </li>
                                 <!--end:::Tab item Informasi Perusahaan-->
 
-
+                                
                                 {{-- <!--begin:::Tab item History-->
                                 <li class="nav-item">
                                     <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_user_view_flight"
@@ -171,12 +171,61 @@
                                 </li>
                                 <!--end:::Tab item History-->
 
+                                <!--begin:::Tab Notes-->
+                                <li class="nav-item">
+                                    <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_notes"
+                                         style="font-size:12px;">ATTACHMENT & NOTES</a>
+                                </li>
+                                <!--end:::Tab Notes-->
+
                             </ul>
                             <!--end:::Tabs-->
                             
                             <!--Begin::Tab Panel-->
                             <div class="tab-content">
-                                <!--Begin::Tab Overview-->
+                                
+                            <!--Begin::Tab Notes-->
+                            <div class="tab-pane fade" id="kt_notes" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                                            <div class="row mb-3">
+                                            <h3>Attachment</h3>
+                                            </div>
+                                            <input type="file" class="form-control form-control-solid"
+                                            id="customer-number" name="customer-number" />
+                                            <br>
+                                            <div class="ms-3">
+                                                            <table class="table align-middle table-row-dashed fs-6" id="kt_customers_table">
+                                                                <!--begin::Table head-->
+                                                                <thead>
+                                                                    <!--begin::Table row-->
+                                                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
+                                                                        <th class="min-w-auto">Attachment Name</th>
+                                                                        <th class="min-w-auto">Modified On</th>
+                                                                        <th class="min-w-auto">Modified By</th>
+                                                                        <th class="w-100px"></th>
+                                                                    </tr>
+                                                                    <!--end::Table row-->
+                                                                </thead>
+                                                                <!--end::Table head-->
+                                                                <!--begin::Table body-->
+                                                                <tbody class="fw-bold text-gray-600">
+                                                                                                                                                                                                                
+                                                                </tbody>
+                                                                <!--end::Table body-->
+                                                            </table>
+                                                        </div>
+                                                        <br>
+                                            <hr>
+                                            <div class="row mb-3">
+                                            <h3>Notes</h3>
+                                            </div>
+                                            <div class="form-group">
+                                             <textarea class="form-control form-control-text" name="note-attachment" style="min-height: 300px; height: 68px;"></textarea>
+                                            </div>
+                                    
+                                </div>
+                                <!--End::Tab Notes-->
+                            
+                            <!--Begin::Tab Overview-->
                                 <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                     <div class="container">
                                         <div class="row fv-row">

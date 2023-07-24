@@ -25,14 +25,14 @@
                     class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                     <!--begin::Title-->
                     <div class="d-flex flex-row justify-content-beetwen">
-                        <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">PTP-00001</h1>
+                        <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">INV-00001</h1>
                     </div>
                     <!--end::Title-->
                 </div>
                 <!--end::Page title-->
 
                 <div class="action">
-                    <!-- <a href="/download/Invoice" class="btn btn-sm btn-primary me-2">Print Invoice</a> -->
+                    <a href="/download/Invoice" class="btn btn-sm btn-primary me-2">Print Invoice</a>
                     <button class="btn btn-success btn-sm me-2" form="form-1">Save</button>
                     <a href="/job-order" class="btn btn-sm btn-secondary">Cancel</a>
                 </div>
@@ -42,7 +42,7 @@
         </div>
         <!--end::Toolbar-->
 
-        <div class="col-xl-15 mb-8 mx-6">
+        <!-- <div class="col-xl-15 mb-8 mx-6">
             <div class="card card-flush h-lg-100" id="kt_contacts_main">
                 <div class="card-body pt-auto" style="background-color:#f1f1f1; border:1px solid #e6e6e6;">
                     <div id="stage-button" class="stage-list">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -93,12 +93,12 @@
                                             <div class="fv-row mb-7">
                                                 <!--begin::Label-->
                                                 <label class="fs-6 fw-bold form-label mt-3 required">
-                                                    <span>No. Procure to Pay<i class="bi bi-lock-fill"></i></span>
+                                                    <span>No. Invoice<i class="bi bi-lock-fill"></i></span>
                                                 </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="text" id="no-job-order" name="no-job-order"
-                                                    class="form-control form-control-solid" value="PTP-00001"
+                                                    class="form-control form-control-solid" value="INV-00001"
                                                     placeholder="No. Job Order" readonly />
                                                 @error('no-job-order')
                                                     <h6 class="text-danger fw-normal">{{ $message }}</h6>
@@ -111,30 +111,12 @@
                                             <div class="fv-row mb-7">
                                                 <!--begin::Label-->
                                                 <label class="fs-6 fw-bold form-label mt-3 required">
-                                                    <span>Order Date</span>
+                                                    <span>Date</span>
                                                 </label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <input type="date" id="date" name="date"
                                                     class="form-control form-control-solid" value="2023-06-12"
-                                                    placeholder="Date" />
-                                                @error('date')
-                                                    <h6 class="text-danger fw-normal">{{ $message }}</h6>
-                                                @enderror
-                                                <!--end::Input-->
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group Website-->
-                                            <div class="fv-row mb-7">
-                                                <!--begin::Label-->
-                                                <label class="fs-6 fw-bold form-label mt-3 required">
-                                                    <span>Received Date</span>
-                                                </label>
-                                                <!--end::Label-->
-                                                <!--begin::Input-->
-                                                <input type="date" id="date" name="date"
-                                                    class="form-control form-control-solid" value="2023-06-21"
                                                     placeholder="Date" />
                                                 @error('date')
                                                     <h6 class="text-danger fw-normal">{{ $message }}</h6>
@@ -192,7 +174,19 @@
                                             </div>
                                             <!--end::Input group-->
                                             
-                                            
+                                            <!--begin::Input group Website-->
+                                            <div class="fv-row mb-6">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-bold form-label mt-3">
+                                                    <span>Attachment</span>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="file" class="form-control form-control-solid"
+                                                    id="customer-number" name="customer-number" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
 
                                     </div>
                                 </div>
@@ -240,19 +234,19 @@
                                     </li>
                                     <!--end:::Tab item Informasi Perusahaan-->
 
-                                    <!--begin:::Tab Overview-->
-                                    <li class="nav-item">
-                                            <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_contact_overview"
-                                                style="font-size:12px;">INVOICE</a>
-                                        </li>
-                                    <!--end:::Tab Overview-->
-
                                     <!--begin:::Tab Notes-->
                                     <li class="nav-item">
                                             <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_notes"
                                                 style="font-size:12px;">ATTACHMENT & NOTES</a>
                                     </li>
                                     <!--end:::Tab Notes-->
+
+                                    <!--begin:::Tab Overview-->
+                                    <!-- <li class="nav-item">
+                                            <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_contact_overview"
+                                                style="font-size:12px;">INVOICE</a>
+                                        </li> -->
+                                    <!--end:::Tab Overview-->
 
 
                                  <!--begin:::Tab item History-->
@@ -315,13 +309,12 @@
                                     
                                 </div>
                                 <!--End::Tab Notes-->
-
+                                
+                                
                                 <!--Begin::Tab Overview-->
                                 <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                             <div class="row">
-                                            <h3>Invoices 
-                                                <button type="button" class="btn btn-sm btn-secondary ms-5">Add +</button>
-                                            </h3>
+                                            <h3>Invoices</h3>
                                             </div>
                                     <table id="example" class="table table-striped" style="width:100%">
                                             <thead>
@@ -340,7 +333,7 @@
                                                 @endphp
                                                     <tr>
                                                         <td style="text-align:center">{{ $no++ }}</td>
-                                                        <td><a href="/view-invoice">INV-00001</a></td>
+                                                        <td><a href="/view-procure-to-pay">INV-00001</a></td>
                                                         <td><a href="#">PT. Palugada</a></td>
                                                         <td>Admin</td>
                                                         <td>Rp.1.775.000</td>                                                        
@@ -418,6 +411,60 @@
                                     <div class="tab-pane fade show active" id="kt_contact_information" role="tabpanel"
                                         aria-labelledby="info-tab" tabindex="0">
                                         <div class="row fv-row">
+                                        <div class="row mb-3">
+                                            <h3>Payment</h3>
+                                            </div>
+                                        <div class="row">                                    
+                                            <div class="col-6 mb-3">
+                                                <label class="fs-6 fw-bold form-label mt-3">Payment Status</label>
+                                                <select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">                                                    
+                                                <option value="">Paid</option>
+                                                <option value="">Draft</option>
+                                                <option value="">Canceled</option>                                                
+                                                <option value="">Partially paid</option>
+                                                <option value="">Unpaid</option>
+                                                </select>
+                                            </div>                                    
+                                            <div class="col-6 mb-3">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-bold form-label mt-3">
+                                                        <span>Paid Date</span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="date" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                                    value="2023-06-21" placeholder="Date" />                                                                                     
+                                            </div>
+                                            
+                                            <div class="col-6 mb-3">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-bold form-label mt-3">
+                                                        <span>Payment Amount</span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" id="no-job-order" name="no-job-order" class="form-control form-control-solid" 
+                                                    value="Rp.2.775.000" placeholder="" />                                                                                     
+                                            </div>
+                                            <hr>
+                                            <div class="row fv-row mb-7">
+                                                    <h3>Connected to Job Order</h3>
+                                                    <div class="col-6">
+                                                        <label class="fs-6 fw-bold form-label mt-3">Job Order</label>
+                                                        <select name="type" id="jo" onchange="read(this)" class="form-select" data-hide-search="true" data-placeholder="Select Type">
+                                                    
+                                                        <option value="JO-00001">JO-00001</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                    </br>
+                                                    </br>
+                                                    <a href="/view-job-order" class="btn btn-secondary btn-sm me-2">View</a>
+                                                    </div>
+                                                
+                                                </div>
+                                            <!--end::Input group-->
+                                            <hr>
                                             <div class="row mb-7">
                                             <h3>Product</h3>
                                             </div>
@@ -655,7 +702,12 @@
                                             
                                             </div>
                                             <!--end::Input group-->
-                                         
+                                             <!--Begin::Row-->
+                                             <hr>
+
+                                             
+                                                <!--End::Row-->
+                                            </div>
                                             <!--End::Row-->
                                         </div>
                                         </form>

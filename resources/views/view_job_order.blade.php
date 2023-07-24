@@ -32,8 +32,9 @@
             <!--end::Page title-->
             
             <div class="action">
+                <a href="/view-production" class="btn btn-sm btn-primary">Process to production</a>
                 <button class="btn btn-success btn-sm me-2" form="form-1">Save</button>
-                <a href="/job-order" class="btn btn-sm btn-secondary">Cencel</a>
+                <a href="/job-order" class="btn btn-sm btn-secondary">Cancel</a>
             </div>
 
         </div>
@@ -108,12 +109,46 @@
                                         <div class="fv-row mb-7">
                                             <!--begin::Label-->
                                             <label class="fs-6 fw-bold form-label mt-3 required">
-                                                <span>Delivery Date</span>
+                                                <span>Start Date</span>
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <input type="date" id="date" name="date" class="form-control form-control-solid" 
                                             value="2023-06-12" placeholder="Date" />
+                                            @error('date')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>End Date</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="date" id="date" name="date" class="form-control form-control-solid" 
+                                            value="" placeholder="Date" />
+                                            @error('date')
+                                            <h6 class="text-danger fw-normal">{{ $message }}</h6>
+                                            @enderror
+                                            <!--end::Input-->
+                                        </div>
+                                        <!--end::Input group-->
+
+                                        <!--begin::Input group Website-->
+                                        <div class="fv-row mb-7">
+                                            <!--begin::Label-->
+                                            <label class="fs-6 fw-bold form-label mt-3 required">
+                                                <span>Estimated End Date</span>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input-->
+                                            <input type="date" id="date" name="date" class="form-control form-control-solid" 
+                                            value="2023-06-20" placeholder="Date" />
                                             @error('date')
                                             <h6 class="text-danger fw-normal">{{ $message }}</h6>
                                             @enderror
@@ -198,10 +233,17 @@
                                         INFORMATION</a>
                                 </li>
 
+                                <!--begin:::Tab Notes-->
                                 <li class="nav-item">
+                                            <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_notes"
+                                                style="font-size:12px;">ATTACHMENT & NOTES</a>
+                                    </li>
+                                    <!--end:::Tab Notes-->
+
+                                <!-- <li class="nav-item">
                                     <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_contact_overview"
                                         style="font-size:12px;">PRODUCTION</a>
-                                </li>
+                                </li> -->
 
                                 
                                 <!--end:::Tab item Informasi Perusahaan-->
@@ -226,7 +268,48 @@
                             
                             <!--Begin::Tab Panel-->
                             <div class="tab-content">
-                                <!--Begin::Tab Overview-->
+                            <!--Begin::Tab Notes-->
+                            <div class="tab-pane fade" id="kt_notes" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+                                            <div class="row mb-3">
+                                            <h3>Attachment</h3>
+                                            </div>
+                                            <input type="file" class="form-control form-control-solid"
+                                            id="customer-number" name="customer-number" />
+                                            <br>
+                                            <div class="ms-3">
+                                                            <table class="table align-middle table-row-dashed fs-6" id="kt_customers_table">
+                                                                <!--begin::Table head-->
+                                                                <thead>
+                                                                    <!--begin::Table row-->
+                                                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase">
+                                                                        <th class="min-w-auto">Attachment Name</th>
+                                                                        <th class="min-w-auto">Modified On</th>
+                                                                        <th class="min-w-auto">Modified By</th>
+                                                                        <th class="w-100px"></th>
+                                                                    </tr>
+                                                                    <!--end::Table row-->
+                                                                </thead>
+                                                                <!--end::Table head-->
+                                                                <!--begin::Table body-->
+                                                                <tbody class="fw-bold text-gray-600">
+                                                                                                                                                                                                                
+                                                                </tbody>
+                                                                <!--end::Table body-->
+                                                            </table>
+                                                        </div>
+                                                        <br>
+                                            <hr>
+                                            <div class="row mb-3">
+                                            <h3>Notes</h3>
+                                            </div>
+                                            <div class="form-group">
+                                             <textarea class="form-control form-control-text" name="note-attachment" style="min-height: 300px; height: 68px;"></textarea>
+                                            </div>
+                                    
+                                </div>
+                                <!--End::Tab Notes-->    
+                            
+                            <!--Begin::Tab Overview-->
                                 <div class="tab-pane fade" id="kt_contact_overview" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                     <div class="container">
                                     <div class="row fv-row">
@@ -268,7 +351,7 @@
                                             </div>
                                             <div class="col-4 mb-3">
                                                 <label for="" class="mb-3">
-                                                    <span>Qty out</span>
+                                                    <span>Processed quantity</span>
                                                 </label>
                                                 <input type="number" name="qtyout" id="qtyout" value="500" class="form-control form-control-solid" placeholder="0" style="cursor:auto">
                                             </div>

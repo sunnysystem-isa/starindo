@@ -87,58 +87,58 @@
                             </li>
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-1') ? 'active' : '' }}"
                                  href="/dashboard-unit-1" style="font-size:14px;">Unit 1</a> 
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-2') ? 'active' : '' }}"
                                     href="dashboard-unit-2" style="font-size:14px;">Unit 2</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-3') ? 'active' : '' }}"
                                  href="dashboard-unit-3" style="font-size:14px;">Unit 3</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-4') ? 'active' : '' }}"
                                  href="dashboard-unit-4" style="font-size:14px;">Unit 4</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-5') ? 'active' : '' }}"
                                  href="dashboard-unit-5" style="font-size:14px;">Unit 5</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-6') ? 'active' : '' }}"
                                  href="dashboard-unit-6" style="font-size:14px;">Unit 6</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-7') ? 'active' : '' }}"
                                  href="dashboard-unit-7" style="font-size:14px;">Unit 7</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-8') ? 'active' : '' }}"
                                  href="dashboard-unit-8" style="font-size:14px;">Unit 8</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                             <!--begin:::Tab Item Tab Pane-->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-active-primary pb-4 {{ str_contains(Request::Path(), 'dashboard-unit-9') ? 'active' : '' }}"
                                  href="dashboard-unit-9" style="font-size:14px;">Unit 9</a>
-                            </li>
+                            </li> -->
                             <!--end:::Tab Item Tab Pane-->
                         </ul>
                     </div>
