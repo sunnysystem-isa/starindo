@@ -166,7 +166,7 @@
                         <th>PIC Name</th>
                         <th>Delivery Date</th>
                         <th>Status</th>
-                        <th>Print</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -195,7 +195,7 @@
                             <td>Admin</td>
                             <td>27/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 
@@ -208,7 +208,7 @@
                             <td>Admin</td>
                             <td>19/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
                         
@@ -221,7 +221,7 @@
                             <td>Admin</td>
                             <td>10/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 
@@ -234,7 +234,7 @@
                             <td>Admin</td>
                             <td>25/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 
@@ -247,7 +247,7 @@
                             <td>Admin</td>
                             <td>19/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 
@@ -260,7 +260,7 @@
                             <td>Admin</td>
                             <td>01/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 
@@ -273,7 +273,7 @@
                             <td>Admin</td>
                             <td>24/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/DTP">Print</a></td>
                             
                         </tr> 
 

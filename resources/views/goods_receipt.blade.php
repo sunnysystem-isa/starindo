@@ -192,7 +192,7 @@
                             <td>Sealed Cup</td>
                             <td>02/06/2023</td>
                             <td><a href="/view-job-order">JO-00002</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
 
@@ -204,7 +204,7 @@
                             <td>Sealed Cup</td>
                             <td>25/05/2023</td>
                             <td><a href="/view-job-order">JO-00003</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
 
@@ -216,7 +216,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>20/05/2023</td>
                             <td><a href="/view-job-order">JO-00004</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
 
@@ -228,7 +228,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>05/05/2023</td>
                             <td><a href="/view-job-order">JO-00005</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
 
@@ -240,7 +240,7 @@
                             <td>Finish Goods Polybag</td>
                             <td>26/04/2023</td>
                             <td><a href="/view-job-order">JO-00006</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
 
@@ -252,7 +252,7 @@
                             <td>Sealed Cup</td>
                             <td>12/04/2023</td>
                             <td><a href="/view-job-order">JO-00007</a></td>
-                            <td><a href="#">Print</a></td>
+                            <td><a href="/download/GR">Print</a></td>
                             
                         </tr> 
                 </tbody>
