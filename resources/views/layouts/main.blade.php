@@ -18,6 +18,10 @@
     <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/stage.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+    <!-- begin::DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="ttps://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+    <!-- end::DataTables -->
     <style>
         .aside.aside-dark .aside-toggle svg [fill]:not(.permanent):not(g){
             fill: white !important;

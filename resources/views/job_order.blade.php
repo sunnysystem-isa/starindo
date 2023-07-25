@@ -2,6 +2,7 @@
 
 @section('title', 'Contacts')
 
+
 @section('container')
 
 <!--End :: Customer Menu-->
@@ -166,7 +167,7 @@
                         <th>PIC Name</th>
                         <th>Date</th>
                         <th>Status</th>
-                        <th>Action</th>
+                        <th class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -176,26 +177,78 @@
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00001</a></td>
-                            <td>Ferbyansah</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>100000</td>
                             <td>Admin</td>
                             <td>12/06/2023</td>
                             <td>In progess</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr> 
                         
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00002</a></td>
-                            <td>Alexander</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>7000</td>
                             <td>Admin</td>
                             <td>27/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
@@ -208,72 +261,228 @@
                             <td>Admin</td>
                             <td>19/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00004</a></td>
-                            <td>Ferbyansah</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Sealed Cup</td>
                             <td>23000</td>
                             <td>Admin</td>
                             <td>10/05/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00005</a></td>
-                            <td>Alexander</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>2000</td>
                             <td>Admin</td>
                             <td>25/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00006</a></td>
-                            <td>Baker</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>6700</td>
                             <td>Admin</td>
                             <td>19/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00007</a></td>
-                            <td>Ahmad</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>60000</td>
                             <td>Admin</td>
                             <td>01/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
 
                         <tr>
                             <td style="text-align:center">{{ $no++ }}</td>
                             <td><a href="/view-job-order">JO-00008</a></td>
-                            <td>Alexander</td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
                             <td>Finish Goods Polybag</td>
                             <td>10000</td>
                             <td>Admin</td>
                             <td>24/04/2023</td>
                             <td>Complete</td>
-                            <td><a href="/download/JO">Print</a></td>
+                            <!--begin::Action-->
+                            <td class="text-center">
+                                <div class="me-4">
+                                    <!--begin::Menu-->
+                                    <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <i class="bi bi-three-dots text-hover-primary"></i>
+                                    </a>
+                                    <!--begin::Menu 1-->
+                                    <div class="menu menu-sub menu-sub-dropdown"
+                                        data-kt-menu="true">
+                                        <!--begin::Header-->
+                                        <div class="px-7 py-5">
+                                            <a href="/download/JO"><i class="bi bi-printer"></i> Print</a>
+                                        </div>
+                                        <!--begin::Menu separator-->
+                                        <div class="separator border-gray-200"></div>
+                                        <!--end::Menu separator-->
+                                        <div class="px-7 py-5">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_repeat_order"><i class="bi bi-arrow-repeat"></i> Order</a>
+                                        </div>
+                                        <!--end::Header-->
+                                    </div>
+                                    <!--end::Menu 1-->
+                                    <!--end::Menu-->
+                                </div>
+                            </td>
+                            <!--end::Action-->
                             
                         </tr>
                 </tbody>
@@ -397,10 +606,114 @@
 </form>
 <!--end::Modal New Customer-->
 
+<!--begin::Modal New Customer-->
+{{-- <form action="/contact/create" method="post" enctype="multipart/form-data" onsubmit="return validateInputs(this)"> --}}
+    {{-- @csrf --}}
+    <!--begin::Modal - Create Customer-->
+    <div class="modal fade" id="kt_modal_repeat_order" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+        <div class="modal-dialog modal-dialog-centered mw-600px">
+            <!--begin::Modal content-->
+            <div class="modal-content">
+                <!--begin::Modal header-->
+                <div class="modal-header">
+                    <!--begin::Modal title-->
+                    <h2>Repeat Order ?</h2>
+                    <!--end::Modal title-->
+                    <!--begin::Close-->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-1">
+                            <i class="bi bi-x-lg"></i>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Close-->
+                </div>
+                <!--end::Modal header-->
+                
+                <!--begin::Modal body-->
+                <div class="modal-footer">
+                    <button type="buttom" class="btn btn-sm btn-light btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button onclick="myFunction()" type="submit" class="btn btn-sm btn-light btn-success" data-bs-dismiss="modal">Yes</button>
+                </div>
+                <!--end::Modal body-->
+            </div>
+            <!--end::Modal content-->
+        </div>
+        <!--end::Modal dialog-->
+    </div>
+    <!--end::Modal - Create App-->
+{{-- </form> --}}
+<!--end::Modal New Customer-->
+
+<script>
+function myFunction() {
+var table = document.getElementById("example");
+var trlen = table.getElementsByTagName("tr").length;
+console.log(trlen);
+let html = `<td style="text-align:center">{{ $no++ }}</td>
+                            <td><a href="/view-job-order">JO-00009</a></td>
+                            <td>PT {{ Faker\Factory::create()->company() }}</td>
+                            <td>Finish Goods Polybag</td>
+                            <td>100000</td>
+                            <td>Admin</td>
+                            <td>{{ Faker\Factory::create()->dateTime()->format("d/m/Y") }}</td>
+                            <td>In progess</td>
+                            <td class=""><i class="bi bi-three-dots text-hover-primary"></i></td>`;
+var row = table.insertRow(Number(trlen));
+row.innerHTML = html;
+                                                    }
+</script>
+
 
 @endsection
 
 @section('js-script')  
+
+
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> 
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script> 
+<script src="https://cdn.datatables.net/fixedcolumns/4.2.1/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script> 
+
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+    // $(document).ready(function() {
+    //     $('#example').DataTable( {
+    //         dom: 'Bfrtip',
+    //         // dom: '<"float-start me-3"f><"#example"t>Brtip',
+    //         pageLength : 20,
+    //         order: [[0, 'asc']],
+    //         // scrollY : "1000px",
+    //         // scrollX : true,
+    //         // scrollCollapse: true,
+    //         // paging : false,
+    //         // fixedColumns:   {
+    //         //     left: 2,
+    //         //     right: 0
+    //         // },
+    //         buttons: [
+    //             'csv', 'excel', 'print'
+    //             // 'copy', 'csv', 'excel', 'pdf', 'print'
+    //         ]
+    //     } );
+    // } );
+</script>
+<!--end::Data Tables-->
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>

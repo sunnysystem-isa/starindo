@@ -319,9 +319,25 @@ Route::group(['middleware' => ["auth"]], function () {
     Route::get('/procure-to-pay', function () {
         return view('procure_to_pay');
     });
-    
+
     Route::get('/view-procure-to-pay', function () {
         return view('view_procure_to_pay');
+    });
+
+    Route::get('/reture', function () {
+        return view('reture');
+    });
+
+    Route::get('/view-reture', function () {
+        return view('view_reture');
+    });
+
+    Route::get('/wasted-order', function () {
+        return view('wasted_order');
+    });
+
+    Route::get('/view-wasted-order', function () {
+        return view('view_wasted_order');
     });
 
     Route::get('/head-promised-delivery', function () {
