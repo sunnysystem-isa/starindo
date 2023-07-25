@@ -1,7 +1,27 @@
 @extends('layouts.main')
 
-@section('title', 'Contacts')
-
+@section('title', 'Job Order')
+<style>
+    .buttons-excel{
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        border: 0;
+        background-color: #F5F8FA !important;
+    }
+    .buttons-pdf{
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        border: 0;
+        background-color: #F5F8FA !important;
+    }
+</style>
 
 @section('container')
 
@@ -167,7 +187,7 @@
                         <th>PIC Name</th>
                         <th>Date</th>
                         <th>Status</th>
-                        <th class="text-center">Action</th>
+                        {{-- <th class="text-center">Action</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -184,7 +204,7 @@
                             <td>12/06/2023</td>
                             <td>In progess</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -208,7 +228,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr> 
@@ -223,7 +243,7 @@
                             <td>27/05/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -247,7 +267,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -262,7 +282,7 @@
                             <td>19/05/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -286,7 +306,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -301,7 +321,7 @@
                             <td>10/05/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -325,7 +345,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -340,7 +360,7 @@
                             <td>25/04/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -364,7 +384,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -379,7 +399,7 @@
                             <td>19/04/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -403,7 +423,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -418,7 +438,7 @@
                             <td>01/04/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -442,7 +462,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -457,7 +477,7 @@
                             <td>24/04/2023</td>
                             <td>Complete</td>
                             <!--begin::Action-->
-                            <td class="text-center">
+                            {{-- <td class="text-center">
                                 <div class="me-4">
                                     <!--begin::Menu-->
                                     <a href="#" class="fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -481,7 +501,7 @@
                                     <!--end::Menu 1-->
                                     <!--end::Menu-->
                                 </div>
-                            </td>
+                            </td> --}}
                             <!--end::Action-->
                             
                         </tr>
@@ -672,58 +692,53 @@ row.innerHTML = html;
 @section('js-script')  
 
 
+
+
+{{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> 
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script> 
-<script src="https://cdn.datatables.net/fixedcolumns/4.2.1/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script> 
-
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
-        } );
-    } );
-    // $(document).ready(function() {
-    //     $('#example').DataTable( {
-    //         dom: 'Bfrtip',
-    //         // dom: '<"float-start me-3"f><"#example"t>Brtip',
-    //         pageLength : 20,
-    //         order: [[0, 'asc']],
-    //         // scrollY : "1000px",
-    //         // scrollX : true,
-    //         // scrollCollapse: true,
-    //         // paging : false,
-    //         // fixedColumns:   {
-    //         //     left: 2,
-    //         //     right: 0
-    //         // },
-    //         buttons: [
-    //             'csv', 'excel', 'print'
-    //             // 'copy', 'csv', 'excel', 'pdf', 'print'
-    //         ]
-    //     } );
-    // } );
-</script>
-<!--end::Data Tables-->
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script> --}}
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.jqueryui.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.jqueryui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.colVis.min.js"></script>
 
 <script>
     $(document).ready(function(){
         if(window.location.href.indexOf('#modal') > -1)
-            $('#kt_modal_create_customer').modal('show');
+        $('#kt_modal_create_customer').modal('show');
     });
 </script>
+
+
+<script>
+    $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        dom: '<"float-start me-3"f><"#example"t>Brtip',
+        lengthChange: false,
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                title: 'Production'
+            },
+            {
+                extend: 'pdfHtml5',
+                title: 'Production'
+            }
+        ]
+    } );
+ 
+    table.buttons().container()
+        .insertBefore( '#example_filter' ).appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
+</script>
+<!--end::Data Tables-->
 
 
 

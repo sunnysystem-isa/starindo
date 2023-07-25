@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Contacts')
+@section('title', 'Productions')
 <style>
     .buttons-excel{
         padding: 10px;
@@ -10,7 +10,7 @@
         margin-right: 10px;
         margin-bottom: 0;
         border: 0;
-        background-color: #d1dbd5 !important;
+        background-color: #F5F8FA !important;
     }
     .buttons-pdf{
         padding: 10px;
@@ -19,7 +19,7 @@
         border-radius: 5px;
         margin-right: 10px;
         border: 0;
-        background-color: #d1dbd5 !important;
+        background-color: #F5F8FA !important;
     }
 </style>
 @section('container')
@@ -441,6 +441,7 @@
 <script>
     $(document).ready(function() {
     var table = $('#example').DataTable( {
+        dom: '<"float-start me-3"f><"#example"t>Brtip',
         lengthChange: false,
         buttons: [
             {
